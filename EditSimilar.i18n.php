@@ -482,6 +482,21 @@ $messages['ml'] = array(
 	'editsimilar-link-disable' => 'ക്രമീകരണങ്ങൾ നടത്തുക',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ * @author Nghtwlkr
+ */
+$messages['nb'] = array(
+	'editsimilar-desc' => 'Oppfordrer brukere til å redigere lignende sider etter å ha lagret en side',
+	'editsimilar-thanks' => 'Takk for bidraget ditt.
+Sjekk {{PLURAL:$2|denne relaterte siden|disse relaterte sidene}}: $1.',
+	'editsimilar-thanks-notsimilar' => 'Takk for bidraget ditt.
+{{PLURAL:$2|Denne siden|Disse sidene}} kan også trenge din hjelp: $1.',
+	'editsimilar-thankyou' => 'Takk for bidraget ditt, $1!',
+	'editsimilar-link-disable' => 'endre innstillinger',
+	'tog-edit-similar' => 'Slå på forslag for lignende sider',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
@@ -508,21 +523,6 @@ Sjekk {{PLURAL:$2|denne relaterte sida|desse relaterte sidene}}: $1.',
 	'editsimilar-thankyou' => 'Takk for bidraget ditt, $1!',
 	'editsimilar-link-disable' => 'endra innstillingar',
 	'tog-edit-similar' => 'Slå på forslag for liknande sider',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
- * @author Nghtwlkr
- */
-$messages['nb'] = array(
-	'editsimilar-desc' => 'Oppfordrer brukere til å redigere lignende sider etter å ha lagret en side',
-	'editsimilar-thanks' => 'Takk for bidraget ditt.
-Sjekk {{PLURAL:$2|denne relaterte siden|disse relaterte sidene}}: $1.',
-	'editsimilar-thanks-notsimilar' => 'Takk for bidraget ditt.
-{{PLURAL:$2|Denne siden|Disse sidene}} kan også trenge din hjelp: $1.',
-	'editsimilar-thankyou' => 'Takk for bidraget ditt, $1!',
-	'editsimilar-link-disable' => 'endre innstillinger',
-	'tog-edit-similar' => 'Slå på forslag for lignende sider',
 );
 
 /** Occitan (Occitan)
@@ -624,6 +624,7 @@ $messages['roa-tara'] = array(
 
 /** Russian (Русский)
  * @author Ferrer
+ * @author KPu3uC B Poccuu
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
@@ -634,7 +635,7 @@ $messages['ru'] = array(
 {{PLURAL:$2|Эта страница, вероятно, также нуждается|Эти страницы, вероятно, также нуждаются}} в вашем внимании: $1.',
 	'editsimilar-thankyou' => 'Спасибо за ваш вклад, $1!',
 	'editsimilar-link-disable' => 'установить настройки',
-	'tog-edit-similar' => 'Включить предложения редактировать похожие страницы',
+	'tog-edit-similar' => 'Включить предложения редактировать похожие страницы.',
 );
 
 /** Slovak (Slovenčina)
