@@ -623,6 +623,7 @@ $messages['roa-tara'] = array(
 );
 
 /** Russian (Русский)
+ * @author AlexSm
  * @author Ferrer
  * @author KPu3uC B Poccuu
  * @author Александр Сигачёв
@@ -635,7 +636,7 @@ $messages['ru'] = array(
 {{PLURAL:$2|Эта страница, вероятно, также нуждается|Эти страницы, вероятно, также нуждаются}} в вашем внимании: $1.',
 	'editsimilar-thankyou' => 'Спасибо за ваш вклад, $1!',
 	'editsimilar-link-disable' => 'установить настройки',
-	'tog-edit-similar' => 'Включить предложения редактировать похожие страницы.',
+	'tog-edit-similar' => 'Включить предложения редактировать похожие страницы',
 );
 
 /** Slovak (Slovenčina)
