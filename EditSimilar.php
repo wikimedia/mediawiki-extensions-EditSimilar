@@ -85,7 +85,7 @@ function wfEditSimilarViewMesg( &$out ) {
 			$title = $out->getTitle();
 			$articleTitle = $title->getText();
 			// here we'll populate the similar articles and links
-			$instance = new EditSimilar( $title->getArticleId(), 'category' );
+			$instance = new EditSimilar( $title->getArticleID(), 'category' );
 			$similarities = $instance->getSimilarArticles();
 
 			if ( !empty( $similarities ) ) {
