@@ -76,6 +76,20 @@ $messages['arz'] = array(
 	'tog-edit-similar' => 'تفعيل اقتراحات الصفحات المشابهة',
 );
 
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'editsimilar-desc' => 'Encamienta a los usuarios editar páxines asemeyaes dempués de guardar una páxina',
+	'editsimilar-thanks' => 'Gracies pola to collaboración.
+Comprueba {{PLURAL:$2|esta páxina rellacionada|estes páxines rellacionaes}}: $1.',
+	'editsimilar-thanks-notsimilar' => 'Gracies pola to collaboración.
+{{PLURAL:$2|Esta páxina|Estes páxines}} tamién podríen recibir la to ayuda: $1.',
+	'editsimilar-thankyou' => '¡Gracies pola to collaboración, $1!',
+	'editsimilar-link-disable' => 'configurar preferencies',
+	'tog-edit-similar' => 'Activar les suxerencies de páxines asemeyaes',
+);
+
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
