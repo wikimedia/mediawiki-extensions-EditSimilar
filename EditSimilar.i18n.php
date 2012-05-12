@@ -527,6 +527,7 @@ $messages['nl'] = array(
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
  * @author Harald Khan
+ * @author Njardarlogar
  */
 $messages['nn'] = array(
 	'editsimilar-desc' => 'Oppfordrar brukarar til å endra liknande sider etter å ha lagra ei sida',
