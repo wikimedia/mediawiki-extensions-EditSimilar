@@ -428,11 +428,14 @@ Anche {{PLURAL:$2|questa pagina potrebbe|queste pagine potrebbero}} usufruire de
 /** Japanese (日本語)
  * @author Aotake
  * @author Fryed-peach
+ * @author Shirayuki
  */
 $messages['ja'] = array(
 	'editsimilar-desc' => '利用者がページを保存した後に、類似のページを編集するよう勧める',
-	'editsimilar-thanks' => '投稿ありがとうございます。関連する{{PLURAL:$2|この|これらの}}ページにも目を通してみてください: $1',
-	'editsimilar-thanks-notsimilar' => '投稿ありがとうございます。{{PLURAL:$2|こちらの|これらの}}ページにもあなたの助けが活かせるかもしれません: $1',
+	'editsimilar-thanks' => '投稿ありがとうございます。
+関連する{{PLURAL:$2|この|これらの}}ページにも目を通してみてください: $1',
+	'editsimilar-thanks-notsimilar' => '投稿ありがとうございます。
+あなたの助けが{{PLURAL:$2|この|これらの}}ページにも活かせるかもしれません: $1',
 	'editsimilar-thankyou' => '$1さん、投稿ありがとうございます！',
 	'editsimilar-link-disable' => '設定する',
 	'tog-edit-similar' => '類似ページの提案を有効にする',
