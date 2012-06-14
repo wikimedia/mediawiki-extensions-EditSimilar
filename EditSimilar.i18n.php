@@ -76,7 +76,7 @@ $messages['arz'] = array(
 	'tog-edit-similar' => 'تفعيل اقتراحات الصفحات المشابهة',
 );
 
-/** Asturian (Asturianu)
+/** Asturian (asturianu)
  * @author Xuacu
  */
 $messages['ast'] = array(
@@ -106,7 +106,7 @@ $messages['be-tarask'] = array(
 	'tog-edit-similar' => 'Уключыць прапановы падобных старонак',
 );
 
-/** Bulgarian (Български)
+/** Bulgarian (български)
  * @author DCLXVI
  */
 $messages['bg'] = array(
@@ -117,7 +117,7 @@ $messages['bg'] = array(
 	'tog-edit-similar' => 'Включване на предположенията за сходни страници',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fulup
  */
 $messages['br'] = array(
@@ -131,7 +131,7 @@ Moarvat e vo ezhomm eus ho skoazell war {{PLURAL:$2|ar bajenn-mañ|ar pajennoù-
 	'tog-edit-similar' => 'Gweredekaat kinnigoù ar pajennoù kar',
 );
 
-/** Bosnian (Bosanski)
+/** Bosnian (bosanski)
  * @author CERminator
  */
 $messages['bs'] = array(
@@ -145,7 +145,7 @@ Pogledajte {{PLURAL:$2|ovu povezanu stranicu|ove povezane stranice}}: $1.',
 	'tog-edit-similar' => 'Omogući sugestije za slične stranice',
 );
 
-/** Catalan (Català)
+/** Catalan (català)
  * @author Paucabot
  */
 $messages['ca'] = array(
@@ -154,7 +154,7 @@ $messages['ca'] = array(
 	'tog-edit-similar' => 'Activa els suggeriments de pàgines similars',
 );
 
-/** Czech (Česky)
+/** Czech (česky)
  * @author Jkjk
  */
 $messages['cs'] = array(
@@ -230,7 +230,7 @@ Kontrolu {{PLURAL:$2|ĉi tiun rilatan paĝon|ĉi tiujn rilatajn paĝojn}}: $1.',
 	'tog-edit-similar' => 'Ŝaktu sugestojn por similaj paĝoj',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Crazymadlover
  */
 $messages['es'] = array(
@@ -244,7 +244,7 @@ Verifica {{PLURAL:$2|esta página relacionada|estas páginas relacionadas}}: $1.
 	'tog-edit-similar' => 'Habilitar sugerencias de páginas similares',
 );
 
-/** Basque (Euskara)
+/** Basque (euskara)
  * @author Kobazulo
  */
 $messages['eu'] = array(
@@ -262,7 +262,7 @@ $messages['fa'] = array(
 	'editsimilar-link-disable' => 'تنظیم ترجیحات',
 );
 
-/** Finnish (Suomi)
+/** Finnish (suomi)
  * @author Jack Phoenix <jack@countervandalism.net>
  * @author Mobe
  * @author Varusmies
@@ -278,7 +278,7 @@ Katso {{PLURAL:$2|tämä aiheeseen liittyvä sivu|nämä aiheeseen liittyvät si
 	'tog-edit-similar' => 'Ota käyttöön samanlaisten sivujen ehdotukset',
 );
 
-/** French (Français)
+/** French (français)
  * @author Grondin
  * @author IAlex
  * @author McDutchie
@@ -296,7 +296,7 @@ Pouvez-vous vérifier {{PLURAL:$2|cette page connexe|ces pages connexes}} ? $1',
 	'tog-edit-similar' => 'Activer les suggestions des pages similaires',
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
@@ -368,7 +368,7 @@ Wobhladaj sej {{PLURAL:$2|tutu přiwuznu stronu|tutej přiwuznej stronje|tute p�
 	'tog-edit-similar' => 'Namjety za podobne strony zmóžnić',
 );
 
-/** Hungarian (Magyar)
+/** Hungarian (magyar)
  * @author Dani
  * @author Glanthor Reviol
  */
@@ -383,7 +383,7 @@ A következő {{PLURAL:$2|lapnál|lapoknál}} is számítunk a segítségedre: $
 	'tog-edit-similar' => 'Hasonló oldalak javasolása',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author McDutchie
  */
 $messages['ia'] = array(
@@ -411,7 +411,7 @@ Lihat pula {{PLURAL:$2|halaman|halaman}} yang berhubungan dengan ini: $1.',
 	'tog-edit-similar' => 'Nyalakan usulan halaman serupa',
 );
 
-/** Italian (Italiano)
+/** Italian (italiano)
  * @author Darth Kule
  */
 $messages['it'] = array(
@@ -478,7 +478,7 @@ Dës {{PLURAL:$2|Säit kéint|Säite kéinten}} och vun Ärer Hëllef profitéie
 	'tog-edit-similar' => 'Virschloe vun ähnleche Säiten aschalten',
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
@@ -528,7 +528,7 @@ $messages['nl'] = array(
 	'tog-edit-similar' => 'Gelijksoortige paginasuggesties inschakelen',
 );
 
-/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
  * @author Harald Khan
  * @author Njardarlogar
  */
@@ -543,7 +543,7 @@ Sjekk {{PLURAL:$2|denne relaterte sida|desse relaterte sidene}}: $1.',
 	'tog-edit-similar' => 'Slå på forslag for liknande sider',
 );
 
-/** Occitan (Occitan)
+/** Occitan (occitan)
  * @author Cedric31
  */
 $messages['oc'] = array(
@@ -557,7 +557,7 @@ Verificatz {{PLURAL:$2|aquesta pagina aparentada|aquestas paginas aparentadas}} 
 	'tog-edit-similar' => 'Activar las suggestions similaras de las paginas',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author Bartek Łapiński
  * @author Matma Rex
  * @author Sp5uhe
@@ -588,7 +588,7 @@ Contròla {{PLURAL:$2|sta pàgina corelà-sì|ste pàgine corelà-sì}}: $1.',
 	'tog-edit-similar' => 'Abìlita ij sugeriment ëd pàgine smijante',
 );
 
-/** Portuguese (Português)
+/** Portuguese (português)
  * @author Hamilton Abreu
  * @author Malafaya
  */
@@ -603,7 +603,7 @@ Visite {{PLURAL:$2|esta página relacionada|estas páginas relacionadas}}: $1.',
 	'tog-edit-similar' => 'Activar sugestões de páginas semelhantes',
 );
 
-/** Brazilian Portuguese (Português do Brasil)
+/** Brazilian Portuguese (português do Brasil)
  * @author Eduardo.mps
  */
 $messages['pt-br'] = array(
@@ -617,7 +617,7 @@ Veja {{PLURAL:$2|esta página relacionada|estas páginas relacionadas}}: $1.',
 	'tog-edit-similar' => 'Ativar sugestões de páginas semelhantes',
 );
 
-/** Romanian (Română)
+/** Romanian (română)
  * @author AdiJapan
  * @author Firilacroco
  * @author KlaudiuMihaila
@@ -633,14 +633,14 @@ Vedeți și {{PLURAL:$2|această pagină conexă|aceste pagini conexe}}: $1.',
 	'tog-edit-similar' => 'Activează sugestiile paginilor similare',
 );
 
-/** Tarandíne (Tarandíne)
+/** tarandíne (tarandíne)
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
 	'editsimilar-link-disable' => "'mboste le preferenze",
 );
 
-/** Russian (Русский)
+/** Russian (русский)
  * @author AlexSm
  * @author Ferrer
  * @author KPu3uC B Poccuu
@@ -657,7 +657,7 @@ $messages['ru'] = array(
 	'tog-edit-similar' => 'Включить предложения редактировать похожие страницы',
 );
 
-/** Slovak (Slovenčina)
+/** Slovak (slovenčina)
  * @author Helix84
  */
 $messages['sk'] = array(
@@ -671,7 +671,7 @@ Pozrite sa na {{PLURAL:$2|túto súvisiacu stránku|tieto súvisiace stránky}}:
 	'tog-edit-similar' => 'Zapnúť návrhy podobných stránok',
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
  * @author Rancher
  * @author Михајло Анђелковић
  */
@@ -679,12 +679,12 @@ $messages['sr-ec'] = array(
 	'editsimilar-link-disable' => 'подеси поставке',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬) */
+/** Serbian (Latin script) (‪srpski (latinica)‬) */
 $messages['sr-el'] = array(
 	'editsimilar-link-disable' => 'postavi podešavanja',
 );
 
-/** Swedish (Svenska)
+/** Swedish (svenska)
  * @author M.M.S.
  * @author Skalman
  */
@@ -759,7 +759,7 @@ Bạn cũng có thể giúp đỡ {{PLURAL:$2|trang|những trang}} sau: $1.',
 	'tog-edit-similar' => 'Kích hoạt đề nghị về trang tương tự',
 );
 
-/** Simplified Chinese (‪中文(简体)‬) */
+/** Simplified Chinese (‪中文（简体）‬) */
 $messages['zh-hans'] = array(
 	'editsimilar-desc' => '当用户保存页面后鼓励用户编辑一个类似的页面。',
 	'editsimilar-thanks' => '多谢你的贡献。建议你编辑以下$2个相关页面：$1',
@@ -769,7 +769,7 @@ $messages['zh-hans'] = array(
 	'tog-edit-similar' => '启用类似页面编辑建议',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬)
+/** Traditional Chinese (‪中文（繁體）‬)
  * @author Horacewai2
  * @author Mark85296341
  * @author Waihorace
