@@ -90,7 +90,7 @@ Comprueba {{PLURAL:$2|esta páxina rellacionada|estes páxines rellacionaes}}: $
 	'tog-edit-similar' => 'Activar les suxerencies de páxines asemeyaes',
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  * @author Zedlik
@@ -192,7 +192,7 @@ Diese {{PLURAL:$2|Seite könnte|Seiten könnten}} für Sie auch hilfreich sein: 
 	'editsimilar-thankyou' => 'Danke für Ihren Beitrag, $1!',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -304,7 +304,7 @@ $messages['frp'] = array(
 	'editsimilar-link-disable' => 'dèfenir les prèferences',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Toliño
  */
 $messages['gl'] = array(
@@ -354,7 +354,7 @@ $messages['he'] = array(
 	'tog-edit-similar' => 'הצגת הצעות בנוגע לדפים דומים',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
