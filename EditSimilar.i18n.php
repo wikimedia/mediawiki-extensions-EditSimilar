@@ -499,8 +499,7 @@ $messages['ml'] = array(
 	'editsimilar-link-disable' => 'ക്രമീകരണങ്ങൾ നടത്തുക',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
+/** Norwegian Bokmål (‪norsk (bokmål)‬)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
