@@ -441,6 +441,13 @@ $messages['ja'] = array(
 	'tog-edit-similar' => '類似ページの提案を有効にする',
 );
 
+/** Georgian (ქართული)
+ * @author David1010
+ */
+$messages['ka'] = array(
+	'editsimilar-link-disable' => 'კონფიგურაციის დაყენება',
+);
+
 /** Khmer (ភាសាខ្មែរ)
  * @author Lovekhmer
  * @author Thearith
