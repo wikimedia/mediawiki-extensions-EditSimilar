@@ -705,6 +705,16 @@ Kolla {{PLURAL:$2|denna relaterade sida|dessa relaterade sidor}}: $1.',
 	'tog-edit-similar' => 'Slå på förslag för liknande sidor',
 );
 
+/** Tamil (தமிழ்)
+ * @author Karthi.dr
+ */
+$messages['ta'] = array(
+	'editsimilar-thanks' => 'தங்கள் பங்களிப்புக்கு நன்றி.
+{{PLURAL:$2|தொடர்புடைய இந்தப் பக்கத்தைப்|தொடர்புடைய இந்தப் பக்கங்களைப்}}பார்க்கவும் : $1.',
+	'editsimilar-thankyou' => 'தங்கள் பங்களிப்புக்கு நன்றி,  $1!',
+	'editsimilar-link-disable' => 'முன்னுரிமைகளை அமை',
+);
+
 /** Telugu (తెలుగు)
  * @author Chaduvari
  * @author Kiranmayee
