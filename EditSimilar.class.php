@@ -80,15 +80,11 @@ class EditSimilar {
 	 *                        empty or contains -)
 	 */
 	function getStubCategories() {
-		$stubCategories = wfMsgForContent( 'EditSimilar-Categories' );
-		if (
-			( '&lt;EditSimilar-Categories&gt;' == $stubCategories ) ||
-			( '' == $stubCategories ) || ( '-' == $stubCategories )
-		)
-		{
+		$stubCategories = wfMessage( 'EditSimilar-Categories' )->inContentLanguage();
+		if ( $stubCategories->isDisabled() ) {
 			return false;
 		} else {
-			$lines = preg_split( '/\*/', $stubCategories );
+			$lines = preg_split( '/\*/', $stubCategories->text() );
 			$normalisedLines = array();
 			array_shift( $lines );
 			foreach ( $lines as $line ) {
@@ -105,11 +101,12 @@ class EditSimilar {
 	 *                        failure
 	 */
 	function getSimilarArticles() {
-		global $wgUser, $wgEditSimilarMaxResultsToDisplay;
+		global $wgEditSimilarMaxResultsToDisplay;
 
 		if ( empty( $this->mAttentionMarkers ) || !$this->mAttentionMarkers ) {
 			return false;
 		}
+
 		$text = '';
 		$articles = array();
 		$x = 0;
@@ -148,7 +145,6 @@ class EditSimilar {
 			);
 		}
 
-		$sk = $wgUser->getSkin();
 		$realRandValues = array();
 
 		if ( empty( $rand_articles ) ) {
@@ -162,7 +158,7 @@ class EditSimilar {
 		$translatedTitles = $this->idsToTitles( $translatedTitles );
 
 		foreach ( $translatedTitles as $linkTitle ) {
-			$articleLink = $sk->makeKnownLinkObj( $linkTitle );
+			$articleLink = Linker::linkKnown( $linkTitle );
 			$realRandValues[] = $articleLink;
 		}
 
@@ -176,8 +172,6 @@ class EditSimilar {
 	 *                        failure
 	 */
 	function getBaseCategories() {
-		global $wgEditSimilarMaxResultsToDisplay;
-
 		if ( empty( $this->mAttentionMarkers ) || !$this->mAttentionMarkers ) {
 			return false;
 		}
@@ -328,20 +322,21 @@ class EditSimilar {
 	 * @param $text String: message to show
 	 */
 	public static function showMessage( $text ) {
-		global $wgOut, $wgUser, $wgScript, $wgScriptPath;
+		global $wgOut, $wgUser, $wgScript;
 
-		$wgOut->addExtensionStyle( $wgScriptPath . '/extensions/EditSimilar/EditSimilar.css' );
+		$wgOut->addModules( 'ext.editSimilar' );
 
 		// If the user is logged in, give them a link to their preferences in
 		// case if they want to disable EditSimilar suggestions
 		if ( $wgUser->isLoggedIn() ) {
 			$link = '<div class="editsimilar_dismiss">[<span class="plainlinks"><a href="' .
-				$wgScript . '?title=Special:Preferences#prefsection-4" id="editsimilar_preferences">' .
-				wfMsg( 'editsimilar-link-disable' ) .
+				$wgScript . '?title=Special:Preferences#mw-prefsection-editing" id="editsimilar_preferences">' .
+				wfMessage( 'editsimilar-link-disable' )->text() .
 				'</a></span>]</div><div style="display:block">&#160;</div>';
 		} else {
 			$link = '';
 		}
+
 		$wgOut->addHTML(
 			'<div id="editsimilar_links" class="usermessage editsimilar"><div>' .
 			$text . '</div>' . $link .  '</div>'

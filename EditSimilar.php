@@ -38,10 +38,18 @@ $wgHooks['GetPreferences'][] = 'wfEditSimilarToggle';
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'EditSimilar',
-	'version' => '1.20',
+	'version' => '1.21',
 	'author' => array( 'Bartek Łapiński', 'Łukasz Garczewski' ),
 	'url' => 'https://www.mediawiki.org/wiki/Extension:EditSimilar',
 	'descriptionmsg' => 'editsimilar-desc',
+);
+
+// ResourceLoader support for MW 1.17+
+$wgResourceModules['ext.editSimilar'] = array(
+	'styles' => 'EditSimilar.css',
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'EditSimilar',
+	'position' => 'top'
 );
 
 /**
