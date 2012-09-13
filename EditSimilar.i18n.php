@@ -192,6 +192,13 @@ Diese {{PLURAL:$2|Seite könnte|Seiten könnten}} für Sie auch hilfreich sein: 
 	'editsimilar-thankyou' => 'Danke für Ihren Beitrag, $1!',
 );
 
+/** Zazaki (Zazaki)
+ * @author Erdemaslancan
+ */
+$messages['diq'] = array(
+	'editsimilar-link-disable' => 'Tercihan saz kerê',
+);
+
 /** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
