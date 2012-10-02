@@ -90,7 +90,7 @@ Comprueba {{PLURAL:$2|esta páxina rellacionada|estes páxines rellacionaes}}: $
 	'tog-edit-similar' => 'Activar les suxerencies de páxines asemeyaes',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Jim-by
  * @author Zedlik
@@ -181,7 +181,7 @@ Diese {{PLURAL:$2|Seite könnte|Seiten könnten}} auch hilfreich sein: $1.',
 	'tog-edit-similar' => 'Vorschläge für ähnliche Seiten anzeigen',
 );
 
-/** German (formal address) (‪Deutsch (Sie-Form)‬)
+/** German (formal address) (Deutsch (Sie-Form)‎)
  * @author Umherirrender
  */
 $messages['de-formal'] = array(
@@ -513,7 +513,7 @@ $messages['ml'] = array(
 	'editsimilar-link-disable' => 'ക്രമീകരണങ്ങൾ നടത്തുക',
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬)
+/** Norwegian Bokmål (norsk (bokmål)‎)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
@@ -541,7 +541,7 @@ $messages['nl'] = array(
 	'tog-edit-similar' => 'Gelijksoortige paginasuggesties inschakelen',
 );
 
-/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
+/** Norwegian Nynorsk (norsk (nynorsk)‎)
  * @author Harald Khan
  * @author Njardarlogar
  */
@@ -684,7 +684,7 @@ Pozrite sa na {{PLURAL:$2|túto súvisiacu stránku|tieto súvisiace stránky}}:
 	'tog-edit-similar' => 'Zapnúť návrhy podobných stránok',
 );
 
-/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Rancher
  * @author Михајло Анђелковић
  */
@@ -692,7 +692,7 @@ $messages['sr-ec'] = array(
 	'editsimilar-link-disable' => 'подеси поставке',
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬) */
+/** Serbian (Latin script) (srpski (latinica)‎) */
 $messages['sr-el'] = array(
 	'editsimilar-link-disable' => 'postavi podešavanja',
 );
@@ -782,7 +782,7 @@ Bạn cũng có thể giúp đỡ {{PLURAL:$2|trang|những trang}} sau: $1.',
 	'tog-edit-similar' => 'Kích hoạt đề nghị về trang tương tự',
 );
 
-/** Simplified Chinese (‪中文（简体）‬) */
+/** Simplified Chinese (中文（简体）‎) */
 $messages['zh-hans'] = array(
 	'editsimilar-desc' => '当用户保存页面后鼓励用户编辑一个类似的页面。',
 	'editsimilar-thanks' => '多谢你的贡献。建议你编辑以下$2个相关页面：$1',
@@ -792,7 +792,7 @@ $messages['zh-hans'] = array(
 	'tog-edit-similar' => '启用类似页面编辑建议',
 );
 
-/** Traditional Chinese (‪中文（繁體）‬)
+/** Traditional Chinese (中文（繁體）‎)
  * @author Horacewai2
  * @author Mark85296341
  * @author Waihorace
