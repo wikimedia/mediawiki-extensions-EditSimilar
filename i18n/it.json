@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Darth Kule"
+		]
+	},
+	"editsimilar-desc": "Incoraggia gli utenti a modificare pagine simili dopo aver salvato una pagina",
+	"editsimilar-thanks": "Grazie per il contributo.\r\nGuarda anche {{PLURAL:$2|questa pagina correlata|queste pagine correlate}}: $1.",
+	"editsimilar-thanks-notsimilar": "Grazie per il tuo contributo.\r\nAnche {{PLURAL:$2|questa pagina potrebbe|queste pagine potrebbero}} usufruire del tuo aiuto: $1.",
+	"editsimilar-thankyou": "Grazie per il tuo contributo, $1!",
+	"editsimilar-link-disable": "imposta preferenze",
+	"tog-edit-similar": "Attiva suggerimenti di pagine simili"
+}

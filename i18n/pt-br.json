@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo.mps"
+		]
+	},
+	"editsimilar-desc": "Encoraja os utilizadores a editarem uma página semelhante depois de gravar uma página",
+	"editsimilar-thanks": "Obrigado pela sua contribuição.\r\nVeja {{PLURAL:$2|esta página relacionada|estas páginas relacionadas}}: $1.",
+	"editsimilar-thanks-notsimilar": "Obrigado pela sua contribuição.\r\n{{PLURAL:$2|Esta página|Estas páginas}} também poderiam ser beneficiadas por sua ajuda: $1.",
+	"editsimilar-thankyou": "Obrigado pela sua contribuição, $1!",
+	"editsimilar-link-disable": "configurar preferências",
+	"tog-edit-similar": "Ativar sugestões de páginas semelhantes"
+}

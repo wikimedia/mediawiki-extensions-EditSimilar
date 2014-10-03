@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dani",
+			"Glanthor Reviol"
+		]
+	},
+	"editsimilar-desc": "Lap elmentése után hasonló oldalak szerkesztését javasolja a szerkesztőknek",
+	"editsimilar-thanks": "Köszönjük a közreműködésedet.\r\nNézd meg a következő kapcsolódó {{PLURAL:$2|lapot|lapokat}}: $1.",
+	"editsimilar-thanks-notsimilar": "Köszönjük a közreműködésedet.\r\nA következő {{PLURAL:$2|lapnál|lapoknál}} is számítunk a segítségedre: $1.",
+	"editsimilar-thankyou": "Köszönjük a szerkesztésedet, $1!",
+	"editsimilar-link-disable": "beállítás",
+	"tog-edit-similar": "Hasonló oldalak javasolása"
+}

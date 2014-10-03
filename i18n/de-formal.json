@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Umherirrender"
+		]
+	},
+	"editsimilar-thanks": "Vielen Dank für Ihren Beitrag.\r\nSchauen Sie sich auch diese {{PLURAL:$2|ähnliche Seite|ähnlichen Seiten}} an: $1.",
+	"editsimilar-thanks-notsimilar": "Vielen Dank für Ihren Beitrag.\r\nDiese {{PLURAL:$2|Seite könnte|Seiten könnten}} für Sie auch hilfreich sein: $1.",
+	"editsimilar-thankyou": "Danke für Ihren Beitrag, $1!"
+}

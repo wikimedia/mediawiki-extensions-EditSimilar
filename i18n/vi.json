@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen",
+			"Vinhtantran"
+		]
+	},
+	"editsimilar-desc": "Khuyến khích người dùng sửa đổi một trang tương tự sau khi đã lưu một trang",
+	"editsimilar-thanks": "Cảm ơn vì sự đóng góp của bạn.\r\nMời bạn xem qua {{PLURAL:$2|trang|các trang}} tương tự: $1.",
+	"editsimilar-thanks-notsimilar": "Cảm ơn vì sự đóng góp của bạn.\r\nBạn cũng có thể giúp đỡ {{PLURAL:$2|trang|những trang}} sau: $1.",
+	"editsimilar-thankyou": "Cảm ơn về sự đóng góp của $1!",
+	"editsimilar-link-disable": "tùy chọn",
+	"tog-edit-similar": "Kích hoạt đề nghị về trang tương tự"
+}

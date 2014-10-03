@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"editsimilar-desc": "Moedigt gebruikers aan om gelijksoortige pagina's te bewerken na het opslaan van een pagina",
+	"editsimilar-thanks": "Dank u wel voor uw bijdrage.\r\n{{PLURAL:$2|De gerelateerde pagina $1 kan|De gerelateerde pagina's $1 kunnen}} uw hulp ook gebruiken.",
+	"editsimilar-thanks-notsimilar": "Dank u wel voor uw bijdrage.\r\n{{PLURAL:$2|De pagina $1 kan|De pagina's $1 kunnen}} uw hulp ook gebruiken.",
+	"editsimilar-thankyou": "Dank u wel voor uw bijdrage, $1!",
+	"editsimilar-link-disable": "voorkeuren instellen",
+	"tog-edit-similar": "Gelijksoortige paginasuggesties inschakelen"
+}

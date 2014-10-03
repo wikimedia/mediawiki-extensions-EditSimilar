@@ -8,18 +8,36 @@
  * @author Łukasz Garczewski (TOR) <tor@wikia-inc.com>
  * @copyright Copyright © 2008, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
- * @link http://www.mediawiki.org/wiki/Extension:EditSimilar Documentation
+ * @link https://www.mediawiki.org/wiki/Extension:EditSimilar Documentation
  */
 
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die( "This is not a valid entry point.\n" );
 }
 
-// Internationalization file
-$dir = dirname( __FILE__ ) . '/';
-$wgExtensionMessagesFiles['EditSimilar'] = $dir . 'EditSimilar.i18n.php';
-$wgAutoloadClasses['EditSimilar'] = $dir . 'EditSimilar.class.php';
+// Extension credits that will show up on Special:Version
+$wgExtensionCredits['other'][] = array(
+	'path' => __FILE__,
+	'name' => 'EditSimilar',
+	'version' => '1.23',
+	'author' => array( 'Bartek Łapiński', 'Łukasz Garczewski' ),
+	'url' => 'https://www.mediawiki.org/wiki/Extension:EditSimilar',
+	'descriptionmsg' => 'editsimilar-desc',
+);
 
+// Internationalization file & the new class to be autoloaded
+$wgMessagesDirs['EditSimilar'] = __DIR__ . '/i18n';
+$wgAutoloadClasses['EditSimilar'] = __DIR__ . '/EditSimilar.class.php';
+
+// ResourceLoader support for MW 1.17+
+$wgResourceModules['ext.editSimilar'] = array(
+	'styles' => 'EditSimilar.css',
+	'localBasePath' => __DIR__,
+	'remoteExtPath' => 'EditSimilar',
+	'position' => 'top'
+);
+
+# Configuration
 // maximum number of results to choose from
 $wgEditSimilarMaxResultsPool = 50;
 
@@ -28,43 +46,36 @@ $wgEditSimilarMaxResultsToDisplay = 3;
 
 // show message per specified number of edits
 $wgEditSimilarCounterValue = 1;
+# End configuration
 
 // Hooked functions
-$wgHooks['ArticleSaveComplete'][] = 'wfEditSimilarCheck';
+$wgHooks['PageContentSaveComplete'][] = 'wfEditSimilarCheck';
 $wgHooks['OutputPageBeforeHTML'][] = 'wfEditSimilarViewMesg';
 $wgHooks['GetPreferences'][] = 'wfEditSimilarToggle';
-
-// Extension credits that will show up on Special:Version
-$wgExtensionCredits['other'][] = array(
-	'path' => __FILE__,
-	'name' => 'EditSimilar',
-	'version' => '1.21',
-	'author' => array( 'Bartek Łapiński', 'Łukasz Garczewski' ),
-	'url' => 'https://www.mediawiki.org/wiki/Extension:EditSimilar',
-	'descriptionmsg' => 'editsimilar-desc',
-);
-
-// ResourceLoader support for MW 1.17+
-$wgResourceModules['ext.editSimilar'] = array(
-	'styles' => 'EditSimilar.css',
-	'localBasePath' => dirname( __FILE__ ),
-	'remoteExtPath' => 'EditSimilar',
-	'position' => 'top'
-);
 
 /**
  * Check if we had the extension enabled at all and if the current page is in a
  * content namespace.
  *
- * @param Article $article
+ * @param Article $article The page that was edited
+ * @param User $user The user who performed the edit
+ * @param Content $content [unused]
+ * @param string $summary Edit summary [unused]
+ * @param bool $isMinor Is the edit marked as a minor edit? [unused]
+ * @param bool $isWatch [unused]
+ * @param int $section [unused]
+ * @param $flags [unused]
+ * @param Revision $revision [unused]
+ * @param Status $status [unused]
+ * @param int|bool $baseRevId [unused]
  * @return bool
  */
-function wfEditSimilarCheck( $article ) {
-	global $wgUser, $wgContentNamespaces;
+function wfEditSimilarCheck( $article, $user, $content, $summary, $isMinor, $isWatch, $section, $flags, $revision, $status, $baseRevId ) {
+	global $wgContentNamespaces;
 
 	$namespace = $article->getTitle()->getNamespace();
 	if (
-		( $wgUser->getOption( 'edit-similar', 1 ) == 1 ) &&
+		( $user->getOption( 'edit-similar', 1 ) == 1 ) &&
 		( in_array( $namespace, $wgContentNamespaces ) )
 	)
 	{
@@ -77,9 +88,10 @@ function wfEditSimilarCheck( $article ) {
  * Show a message, depending on settings and the relevancy of the results.
  *
  * @param OutputPage $out
+ * @param string $text [unused]
  * @return bool
  */
-function wfEditSimilarViewMesg( &$out ) {
+function wfEditSimilarViewMesg( OutputPage &$out, &$text ) {
 	global $wgUser, $wgEditSimilarAlwaysShowThanks;
 
 	if (
@@ -100,23 +112,21 @@ function wfEditSimilarViewMesg( &$out ) {
 				global $wgLang;
 
 				if ( $instance->mSimilarArticles ) {
-					$messageText = wfMsgExt(
+					$messageText = wfMessage(
 						'editsimilar-thanks',
-						array( 'parsemag' ),
 						$wgLang->listToText( $similarities ),
 						count( $similarities )
-					);
+					)->parse();
 				} else { // the articles we found were rather just articles needing attention
-					$messageText = wfMsgExt(
+					$messageText = wfMessage(
 						'editsimilar-thanks-notsimilar',
-						array( 'parsemag' ),
 						$wgLang->listToText( $similarities ),
 						count( $similarities )
-					);
+					)->parse();
 				}
 			} else {
 				if ( $wgUser->isLoggedIn() && !empty( $wgEditSimilarAlwaysShowThanks ) ) {
-					$messageText = wfMsg( 'editsimilar-thankyou', $wgUser->getName() );
+					$messageText = wfMessage( 'editsimilar-thankyou', $wgUser->getName() )->parse();
 				}
 			}
 
@@ -124,9 +134,11 @@ function wfEditSimilarViewMesg( &$out ) {
 				EditSimilar::showMessage( $messageText, $articleTitle );
 			}
 		}
+
 		// display that only once
 		$_SESSION['ES_saved'] = '';
 	}
+
 	return true;
 }
 

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bartek Łapiński",
+			"Łukasz 'TOR' Garczewski"
+		]
+	},
+	"editsimilar-desc": "Encourages users to edit a similar page after saving a page",
+	"editsimilar-thanks": "Thank you for your contribution.\r\nCheck out {{PLURAL:$2|this related page|these related pages}}: $1.",
+	"editsimilar-thanks-notsimilar": "Thank you for your contribution.\r\n{{PLURAL:$2|This page|These pages}} could also use your help: $1.",
+	"editsimilar-thankyou": "Thank you for your contribution, $1!",
+	"editsimilar-link-disable": "set preferences",
+	"tog-edit-similar": "Enable similar pages suggestions"
+}

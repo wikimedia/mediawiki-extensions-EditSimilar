@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Als-Holder"
+		]
+	},
+	"editsimilar-desc": "Schlat Benutzer noch em Spychere vun ere Syte vor, e ähnligi Syte z bearbeite",
+	"editsimilar-thanks": "Dankschen fir Dyy Byytrag.\r\nLueg au {{PLURAL:$2|die ähnlig Syte|die ähnlige Syte}} aa: $1.",
+	"editsimilar-thanks-notsimilar": "Dankschen fir Dyy Byytrag.\r\n{{PLURAL:$2|Die Syte chennt|Die Syte chennte }} au ne Hilf syy: $1.",
+	"editsimilar-thankyou": "Dankschen fir Dyy Byytrag, $1!",
+	"editsimilar-link-disable": "Yystellige setze",
+	"tog-edit-similar": "Vorschleg fir ähnligi Syten aazeige"
+}

@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jkjk"
+		]
+	},
+	"editsimilar-desc": "Nabádá uživatele editovat podobnou stránku po uložení stránky",
+	"editsimilar-thankyou": "Děkujeme za váš příspěvek, $1!",
+	"editsimilar-link-disable": "nastavit nastavení",
+	"tog-edit-similar": "Zapnout navrhování podobných stránek"
+}

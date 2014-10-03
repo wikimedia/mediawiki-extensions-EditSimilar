@@ -189,8 +189,8 @@ class EditSimilar {
 			array( 'cl_from' => $this->mBaseArticle ),
 			__METHOD__,
 			array(
-				'ORDER_BY'  => 'cl_from',
-				'USE_INDEX' => 'cl_from'
+				'ORDER BY' => 'cl_from',
+				'USE INDEX' => 'cl_from'
 			)
 		);
 
@@ -234,7 +234,7 @@ class EditSimilar {
 		);
 
 		$resultArray = array();
-		foreach( $res as $x ) {
+		foreach ( $res as $x ) {
 			if ( $this->mBaseArticle != $x->cl_from ) {
 				$resultArray[] = $x->cl_from;
 			}
@@ -301,7 +301,7 @@ class EditSimilar {
 		$query = "SELECT c1.cl_from
 				FROM {$dbr->tableName( 'categorylinks' )} AS c1, {$dbr->tableName( 'categorylinks' )} AS c2
 				WHERE c1.cl_from = c2.cl_from
-				AND c1.cl_to = " . $dbr->addQuotes( $title->getDBkey() )  . "
+				AND c1.cl_to = " . $dbr->addQuotes( $title->getDBkey() ) . "
 				AND c2.cl_to IN (";
 
 		$fixedNames = array();
@@ -312,7 +312,7 @@ class EditSimilar {
 		$query .= $stringed_names . ')';
 
 		$res = $dbr->query( $query, __METHOD__ );
-		foreach( $res as $x ) {
+		foreach ( $res as $x ) {
 			if ( $this->mBaseArticle != $x->cl_from ) {
 				$resultArray[] = $x->cl_from;
 			}
@@ -329,14 +329,14 @@ class EditSimilar {
 	public static function showMessage( $text ) {
 		global $wgOut, $wgUser, $wgScript;
 
-		$wgOut->addModules( 'ext.editSimilar' );
+		$wgOut->addModuleStyles( 'ext.editSimilar' );
 
 		// If the user is logged in, give them a link to their preferences in
 		// case if they want to disable EditSimilar suggestions
 		if ( $wgUser->isLoggedIn() ) {
 			$link = '<div class="editsimilar_dismiss">[<span class="plainlinks"><a href="' .
 				$wgScript . '?title=Special:Preferences#mw-prefsection-editing" id="editsimilar_preferences">' .
-				wfMessage( 'editsimilar-link-disable' )->text() .
+				wfMessage( 'editsimilar-link-disable' )->plain() .
 				'</a></span>]</div><div style="display:block">&#160;</div>';
 		} else {
 			$link = '';
@@ -344,7 +344,7 @@ class EditSimilar {
 
 		$wgOut->addHTML(
 			'<div id="editsimilar_links" class="usermessage editsimilar"><div>' .
-			$text . '</div>' . $link .  '</div>'
+			$text . '</div>' . $link . '</div>'
 		);
 	}
 

@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fryed-peach",
+			"Purodha"
+		]
+	},
+	"editsimilar-desc": "Extension description displayed on [[Special:Version]].",
+	"editsimilar-thankyou": "* $1 is a username."
+}
