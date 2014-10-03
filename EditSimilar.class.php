@@ -29,36 +29,36 @@ class EditSimilar {
 	 * @var int $mBaseArticle The Article from which we hail in our quest for
 	 *                        similiarities; this is its page ID number
 	 */
-	var $mBaseArticle;
+	public $mBaseArticle;
 
 	/**
 	 * @var string $mMarkerType How do we mark articles that need attention?
 	 *                          Currently, by category only
 	 */
-	var $mMarkerType;
+	public $mMarkerType;
 
 	/**
 	 * @var array $mAttentionMarkers The marker array (for now it contains categories)
 	 */
-	var $mAttentionMarkers;
+	public $mAttentionMarkers;
 
 	/**
 	 * @var int $mPoolLimit Limit up the pool of 'stubs' to choose from, controlled
 	 *               via the $wgEditSimilarMaxResultsPool global variable
 	 */
-	var $mPoolLimit;
+	public $mPoolLimit;
 
 	/**
 	 * @var array $mBaseCategories Array of extracted categories that this saved
 	 *                             article is in
 	 */
-	var $mBaseCategories;
+	public $mBaseCategories;
 
 	/**
 	 * @var bool $mSimilarArticles To differentiate between really similar results
 	 *                             or just needing attention
 	 */
-	var $mSimilarArticles;
+	public $mSimilarArticles;
 
 	/**
 	 * Constructor
