@@ -56,8 +56,8 @@ $wgResourceModules['ext.editSimilar'] = array(
  * Check if we had the extension enabled at all and if the current page is in a
  * content namespace.
  *
- * @param $article Object: Article object
- * @return Boolean: true
+ * @param Article $article
+ * @return bool
  */
 function wfEditSimilarCheck( $article ) {
 	global $wgUser, $wgContentNamespaces;
@@ -76,8 +76,8 @@ function wfEditSimilarCheck( $article ) {
 /**
  * Show a message, depending on settings and the relevancy of the results.
  *
- * @param $out Object: OutputPage instance
- * @return Boolean: true
+ * @param OutputPage $out
+ * @return bool
  */
 function wfEditSimilarViewMesg( &$out ) {
 	global $wgUser, $wgEditSimilarAlwaysShowThanks;
@@ -134,9 +134,9 @@ function wfEditSimilarViewMesg( &$out ) {
  * Adds the new toggle to Special:Preferences for enabling EditSimilar
  * extension on a per-user basis.
  *
- * @param $user User object
- * @param $preferences Preferences object
- * @return Boolean: true
+ * @param User $user
+ * @param Preferences $preferences
+ * @return bool
  */
 function wfEditSimilarToggle( $user, &$preferences ) {
 	$preferences['edit-similar'] = array(

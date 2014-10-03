@@ -25,41 +25,46 @@
  */
 
 class EditSimilar {
-	var $mBaseArticle; // the article from which we hail in our quest for similiarities, this is its title
+	/**
+	 * @var int $mBaseArticle The Article from which we hail in our quest for
+	 *                        similiarities; this is its page ID number
+	 */
+	var $mBaseArticle;
 
 	/**
-	 * @var String: how do we mark articles that need attention? Currently, by
-	 *              category only
+	 * @var string $mMarkerType How do we mark articles that need attention?
+	 *                          Currently, by category only
 	 */
 	var $mMarkerType;
 
 	/**
-	 * @var Array: the marker array (for now it contains categories)
+	 * @var array $mAttentionMarkers The marker array (for now it contains categories)
 	 */
 	var $mAttentionMarkers;
 
 	/**
-	 * @var Integer: limit up the pool of 'stubs' to choose from, controlled
+	 * @var int $mPoolLimit Limit up the pool of 'stubs' to choose from, controlled
 	 *               via the $wgEditSimilarMaxResultsPool global variable
 	 */
 	var $mPoolLimit;
 
 	/**
-	 * @var Array: array of extracted categories that this saved article is in
+	 * @var array $mBaseCategories Array of extracted categories that this saved
+	 *                             article is in
 	 */
 	var $mBaseCategories;
 
 	/**
-	 * @var Boolean: to differentiate between really similar results or just
-	 *               needing attention
+	 * @var bool $mSimilarArticles To differentiate between really similar results
+	 *                             or just needing attention
 	 */
 	var $mSimilarArticles;
 
 	/**
 	 * Constructor
 	 *
-	 * @param $article Integer: article ID number
-	 * @param $markerType String: always 'category'
+	 * @param int $article Article ID number
+	 * @param string $markerType Always 'category'
 	 */
 	public function __construct( $article, $markerType = 'category' ) {
 		global $wgEditSimilarMaxResultsPool;
@@ -75,9 +80,9 @@ class EditSimilar {
 	 * Fetch categories marked as 'stub categories', controlled via the
 	 * MediaWiki:EditSimilar-Categories interface message.
 	 *
-	 * @return Array|Boolean: array of category names on success, false on
-	 *                        failure (if MediaWiki:EditSimilar-Categories is
-	 *                        empty or contains -)
+	 * @return array|boolean Array of category names on success, false on
+	 *                       failure (if MediaWiki:EditSimilar-Categories is
+	 *                       empty or contains -)
 	 */
 	function getStubCategories() {
 		$stubCategories = wfMessage( 'EditSimilar-Categories' )->inContentLanguage();
@@ -97,7 +102,7 @@ class EditSimilar {
 	/**
 	 * Main function that returns articles we deem similar or worth showing
 	 *
-	 * @return Array|Boolean: array of article names on success, false on
+	 * @return array|bool Array of article names on success, false on
 	 *                        failure
 	 */
 	function getSimilarArticles() {
@@ -168,7 +173,7 @@ class EditSimilar {
 	/**
 	 * Extract all categories our base article is in
 	 *
-	 * @return Array|Boolean: array of category names on success, false on
+	 * @return array|bool Array of category names on success, false on
 	 *                        failure
 	 */
 	function getBaseCategories() {
@@ -189,7 +194,7 @@ class EditSimilar {
 			)
 		);
 
-		foreach( $res as $x ) {
+		foreach ( $res as $x ) {
 			if ( !in_array( $x->cl_to, $this->mAttentionMarkers ) ) {
 				$resultArray[] = $x->cl_to;
 			}
@@ -210,7 +215,7 @@ class EditSimilar {
 	 * This is to ensure we can get always (well, almost - if "marker"
 	 * categories get no results, it's dead in the water anyway) some results.
 	 *
-	 * @return Array: array of category names
+	 * @return array Array of category names
 	 */
 	function getAdditionalCheck() {
 		$dbr = wfGetDB( DB_SLAVE );
@@ -242,8 +247,8 @@ class EditSimilar {
 	 * Turn result IDs into Title objects in one query rather than multiple
 	 * ones.
 	 *
-	 * @param $idArray Array: array of page ID numbers
-	 * @return Array: array of Title objects
+	 * @param array $idArray Array of page ID numbers
+	 * @return array Array of Title objects
 	 */
 	function idsToTitles( $idArray ) {
 		global $wgContentNamespaces;
@@ -279,8 +284,8 @@ class EditSimilar {
 	/**
 	 * Get categories from the 'stub' or 'attention needed' category
 	 *
-	 * @param $markerCategory String: category name
-	 * @return Array: array of category names
+	 * @param string $markerCategory Category name
+	 * @return array Array of category names
 	 */
 	function getResults( $markerCategory ) {
 		$dbr = wfGetDB( DB_SLAVE );
@@ -319,7 +324,7 @@ class EditSimilar {
 	/**
 	 * Message box wrapper
 	 *
-	 * @param $text String: message to show
+	 * @param string $text Message to show
 	 */
 	public static function showMessage( $text ) {
 		global $wgOut, $wgUser, $wgScript;
@@ -346,7 +351,7 @@ class EditSimilar {
 	/**
 	 * For determining whether to display the message or not
 	 *
-	 * @return Boolean: true to show the message, false to not show it
+	 * @return bool True to show the message, false to not show it
 	 */
 	public static function checkCounter() {
 		global $wgEditSimilarCounterValue;
