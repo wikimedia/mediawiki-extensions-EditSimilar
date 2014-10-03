@@ -19,7 +19,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'EditSimilar',
-	'version' => '1.23',
+	'version' => '1.24',
 	'author' => array( 'Bartek Łapiński', 'Łukasz Garczewski' ),
 	'url' => 'https://www.mediawiki.org/wiki/Extension:EditSimilar',
 	'descriptionmsg' => 'editsimilar-desc',
@@ -28,6 +28,7 @@ $wgExtensionCredits['other'][] = array(
 // Internationalization file & the new class to be autoloaded
 $wgMessagesDirs['EditSimilar'] = __DIR__ . '/i18n';
 $wgAutoloadClasses['EditSimilar'] = __DIR__ . '/EditSimilar.class.php';
+$wgAutoloadClasses['EditSimilarHooks'] = __DIR__ . '/EditSimilar.hooks.php';
 
 // ResourceLoader support for MW 1.17+
 $wgResourceModules['ext.editSimilar'] = array(
@@ -49,112 +50,6 @@ $wgEditSimilarCounterValue = 1;
 # End configuration
 
 // Hooked functions
-$wgHooks['PageContentSaveComplete'][] = 'wfEditSimilarCheck';
-$wgHooks['OutputPageBeforeHTML'][] = 'wfEditSimilarViewMesg';
-$wgHooks['GetPreferences'][] = 'wfEditSimilarToggle';
-
-/**
- * Check if we had the extension enabled at all and if the current page is in a
- * content namespace.
- *
- * @param Article $article The page that was edited
- * @param User $user The user who performed the edit
- * @param Content $content [unused]
- * @param string $summary Edit summary [unused]
- * @param bool $isMinor Is the edit marked as a minor edit? [unused]
- * @param bool $isWatch [unused]
- * @param int $section [unused]
- * @param $flags [unused]
- * @param Revision $revision [unused]
- * @param Status $status [unused]
- * @param int|bool $baseRevId [unused]
- * @return bool
- */
-function wfEditSimilarCheck( $article, $user, $content, $summary, $isMinor, $isWatch, $section, $flags, $revision, $status, $baseRevId ) {
-	global $wgContentNamespaces;
-
-	$namespace = $article->getTitle()->getNamespace();
-	if (
-		( $user->getOption( 'edit-similar', 1 ) == 1 ) &&
-		( in_array( $namespace, $wgContentNamespaces ) )
-	)
-	{
-		$_SESSION['ES_saved'] = 'yes';
-	}
-	return true;
-}
-
-/**
- * Show a message, depending on settings and the relevancy of the results.
- *
- * @param OutputPage $out
- * @param string $text [unused]
- * @return bool
- */
-function wfEditSimilarViewMesg( OutputPage &$out, &$text ) {
-	global $wgUser, $wgEditSimilarAlwaysShowThanks;
-
-	if (
-		!empty( $_SESSION['ES_saved'] ) &&
-		( $wgUser->getOption( 'edit-similar', 1 ) == 1 ) &&
-		$out->isArticle()
-	)
-	{
-		if ( EditSimilar::checkCounter() ) {
-			$message_text = '';
-			$title = $out->getTitle();
-			$articleTitle = $title->getText();
-			// here we'll populate the similar articles and links
-			$instance = new EditSimilar( $title->getArticleID(), 'category' );
-			$similarities = $instance->getSimilarArticles();
-
-			if ( !empty( $similarities ) ) {
-				global $wgLang;
-
-				if ( $instance->mSimilarArticles ) {
-					$messageText = wfMessage(
-						'editsimilar-thanks',
-						$wgLang->listToText( $similarities ),
-						count( $similarities )
-					)->parse();
-				} else { // the articles we found were rather just articles needing attention
-					$messageText = wfMessage(
-						'editsimilar-thanks-notsimilar',
-						$wgLang->listToText( $similarities ),
-						count( $similarities )
-					)->parse();
-				}
-			} else {
-				if ( $wgUser->isLoggedIn() && !empty( $wgEditSimilarAlwaysShowThanks ) ) {
-					$messageText = wfMessage( 'editsimilar-thankyou', $wgUser->getName() )->parse();
-				}
-			}
-
-			if ( $messageText != '' ) {
-				EditSimilar::showMessage( $messageText, $articleTitle );
-			}
-		}
-
-		// display that only once
-		$_SESSION['ES_saved'] = '';
-	}
-
-	return true;
-}
-
-/**
- * Adds the new toggle to Special:Preferences for enabling EditSimilar
- * extension on a per-user basis.
- *
- * @param User $user
- * @param Preferences $preferences
- * @return bool
- */
-function wfEditSimilarToggle( $user, &$preferences ) {
-	$preferences['edit-similar'] = array(
-		'type' => 'toggle',
-		'section' => 'editing',
-		'label-message' => 'tog-edit-similar',
-	);
-	return true;
-}
+$wgHooks['PageContentSaveComplete'][] = 'EditSimilarHooks::onPageContentSaveComplete';
+$wgHooks['OutputPageBeforeHTML'][] = 'EditSimilarHooks::onOutputPageBeforeHTML';
+$wgHooks['GetPreferences'][] = 'EditSimilarHooks::onGetPreferences';
