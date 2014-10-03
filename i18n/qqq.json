@@ -5,6 +5,10 @@
 			"Purodha"
 		]
 	},
-	"editsimilar-desc": "Extension description displayed on [[Special:Version]].",
-	"editsimilar-thankyou": "* $1 is a username."
+	"editsimilar-desc": " {{desc|what=extension|name=EditSimilar|url=https://www.mediawiki.org/wiki/Extension:EditSimilar}}",
+	"editsimilar-thanks": "This is a label saying thank you for your contribution. $2 is plural for message for example this related page and these related pages. * $1 is a username.",
+	"editsimilar-thanks-notsimilar": "This is a label saying thank you for your contribution. $2 is plural for message for example This page and These pages. * $1 is a username.",
+	"editsimilar-thankyou": "This is a label saying thank you for your contribution. * $1 is a username.",
+	"editsimilar-link-disable": "This is a button saying preferences",
+	"tog-edit-similar": "This is a label saying to enable similar pages suggestions"
 }
