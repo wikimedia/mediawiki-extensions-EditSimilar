@@ -1,11 +1,13 @@
 {
 	"@metadata": {
-		"authors": []
+		"authors": [
+			"Liuxinyu970226"
+		]
 	},
-	"editsimilar-desc": "当用户保存页面后鼓励用户编辑一个类似的页面。",
-	"editsimilar-thanks": "多谢你的贡献。建议你编辑以下$2个相关页面：$1",
-	"editsimilar-thanks-notsimilar": "多谢你的贡献，不防继续考虑编辑这$2个页面：$1",
-	"editsimilar-thankyou": "$1，多谢你的贡献。",
+	"editsimilar-desc": "在保存页面后，鼓励用户编辑一个相似页面",
+	"editsimilar-thanks": "感谢您的贡献。看看{{PLURAL:$2|此|这些}}相关页面吧：$1。",
+	"editsimilar-thanks-notsimilar": "感谢您的贡献。{{PLURAL:$2|此|这些}}页面也需要您的帮助：$1。",
+	"editsimilar-thankyou": "感谢您的贡献，$1！",
 	"editsimilar-link-disable": "设置参数",
-	"tog-edit-similar": "启用类似页面编辑建议"
+	"tog-edit-similar": "启用相似页面建议"
 }
