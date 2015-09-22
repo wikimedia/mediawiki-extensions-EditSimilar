@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Crazymadlover"
+			"Crazymadlover",
+			"Macofe"
 		]
 	},
 	"editsimilar-desc": "Animaa usuarios a editar una página similar después de grabar una página",
-	"editsimilar-thanks": "Gracias por tu contribución.\r\nVerifica {{PLURAL:$2|esta página relacionada|estas páginas relacionadas}}: $1.",
-	"editsimilar-thanks-notsimilar": "Gracias por tu contribución.\r\n{{PLURAL:$2|Esta página|Estas páginas}} podrían también usar tu ayuda: $1.",
+	"editsimilar-thanks": "Gracias por tu contribución.\nVerifica {{PLURAL:$2|esta página relacionada|estas páginas relacionadas}}: $1.",
+	"editsimilar-thanks-notsimilar": "Gracias por tu contribución.\n{{PLURAL:$2|Esta página podría|Estas páginas podrían}} también usar tu ayuda: $1.",
 	"editsimilar-thankyou": "Gracias por tu contribución, $1!",
 	"editsimilar-link-disable": "configurar preferencias",
 	"tog-edit-similar": "Habilitar sugerencias de páginas similares"
