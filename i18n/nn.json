@@ -6,8 +6,8 @@
 		]
 	},
 	"editsimilar-desc": "Oppfordrar brukarar til å endra liknande sider etter å ha lagra ei sida",
-	"editsimilar-thanks": "Takk for bidraget ditt.\r\nSjekk {{PLURAL:$2|denne relaterte sida|desse relaterte sidene}}: $1.",
-	"editsimilar-thanks-notsimilar": "Takk for bidraget ditt.\r\n{{PLURAL:$2|Denne sida|Desse sidene}} kan òg trenga hjelpa di: $1.",
+	"editsimilar-thanks": "Takk for bidraget ditt.\nSjekk {{PLURAL:$2|denne relaterte sida|desse relaterte sidene}}: $1.",
+	"editsimilar-thanks-notsimilar": "Takk for bidraget ditt.\n{{PLURAL:$2|Denne sida|Desse sidene}} kan òg trenga hjelpa di: $1.",
 	"editsimilar-thankyou": "Takk for bidraget ditt, $1!",
 	"editsimilar-link-disable": "endra innstillingar",
 	"tog-edit-similar": "Slå på forslag for liknande sider"

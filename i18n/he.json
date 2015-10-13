@@ -6,8 +6,8 @@
 		]
 	},
 	"editsimilar-desc": "עידוד המשתמשים לערוך דפים דומים לאחר שמירת דף",
-	"editsimilar-thanks": "תודה על תרומתכם.\r\nאנא עיינו ב{{PLURAL:$2|דף הקשור הבא|דפים הקשורים הבאים}}: $1.",
-	"editsimilar-thanks-notsimilar": "תודה על תרומתכם.\r\nייתכן ש{{PLURAL:$2|דף זה זקוק|דפים אלו זקוקים}} לעזרתכם גם כן: $1.",
+	"editsimilar-thanks": "תודה על תרומתכם.\nאנא עיינו ב{{PLURAL:$2|דף הקשור הבא|דפים הקשורים הבאים}}: $1.",
+	"editsimilar-thanks-notsimilar": "תודה על תרומתכם.\nייתכן ש{{PLURAL:$2|דף זה זקוק|דפים אלו זקוקים}} לעזרתכם גם כן: $1.",
 	"editsimilar-thankyou": "תודה לך על תרומתך, $1!",
 	"editsimilar-link-disable": "הגדרת העדפות",
 	"tog-edit-similar": "הצגת הצעות בנוגע לדפים דומים"

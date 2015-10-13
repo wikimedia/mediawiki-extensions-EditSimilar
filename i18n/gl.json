@@ -5,8 +5,8 @@
 		]
 	},
 	"editsimilar-desc": "Anima aos usuarios a editar páxinas similares despois de gardar unha páxina",
-	"editsimilar-thanks": "Grazas pola súa contribución.\r\nComprobe {{PLURAL:$2|esta páxina relacionada|estas páxinas relacionadas}}: $1.",
-	"editsimilar-thanks-notsimilar": "Grazas pola súa contribución.\r\n{{PLURAL:$2|Esta páxina pode|Estas páxinas poden}} precisar tamén da súa axuda: $1.",
+	"editsimilar-thanks": "Grazas pola súa contribución.\nComprobe {{PLURAL:$2|esta páxina relacionada|estas páxinas relacionadas}}: $1.",
+	"editsimilar-thanks-notsimilar": "Grazas pola súa contribución.\n{{PLURAL:$2|Esta páxina pode|Estas páxinas poden}} precisar tamén da súa axuda: $1.",
 	"editsimilar-thankyou": "Grazas pola súa contribución, $1!",
 	"editsimilar-link-disable": "fixar as preferencias",
 	"tog-edit-similar": "Permitir suxestións de páxinas similares"

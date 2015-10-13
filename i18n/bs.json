@@ -5,8 +5,8 @@
 		]
 	},
 	"editsimilar-desc": "Ohrabruje korisnike za uređuju slične stranice nakon spremanja stranice",
-	"editsimilar-thanks": "Hvala Vam za Vaš doprinos.\r\nPogledajte {{PLURAL:$2|ovu povezanu stranicu|ove povezane stranice}}: $1.",
-	"editsimilar-thanks-notsimilar": "Hvala Vam za Vaš doprinos.\r\n{{PLURAL:$2|Ova stranica|Ove stranice}} Vam također {{PLURAL:$2|može|mogu}} pomoći: $1.",
+	"editsimilar-thanks": "Hvala Vam za Vaš doprinos.\nPogledajte {{PLURAL:$2|ovu povezanu stranicu|ove povezane stranice}}: $1.",
+	"editsimilar-thanks-notsimilar": "Hvala Vam za Vaš doprinos.\n{{PLURAL:$2|Ova stranica|Ove stranice}} Vam također {{PLURAL:$2|može|mogu}} pomoći: $1.",
 	"editsimilar-thankyou": "Korisniče $1, hvala Vam za Vaš doprinos!",
 	"editsimilar-link-disable": "postavi postavke",
 	"tog-edit-similar": "Omogući sugestije za slične stranice"

@@ -5,8 +5,8 @@
 		]
 	},
 	"editsimilar-desc": "Posmeľuje používateľov upravovať podobné stránky po uložení.",
-	"editsimilar-thanks": "Ďakujeme za váš príspevok.\r\nPozrite sa na {{PLURAL:$2|túto súvisiacu stránku|tieto súvisiace stránky}}: $1.",
-	"editsimilar-thanks-notsimilar": "Ďakujeme za váš príspevok.\r\n{{PLURAL:$2|Tejto stránke|Týmto stránkam}} by sa tiež hodilo, keby ste sa na {{PLURAL:$2|ňu|ne}} pozreli: $1.",
+	"editsimilar-thanks": "Ďakujeme za váš príspevok.\nPozrite sa na {{PLURAL:$2|túto súvisiacu stránku|tieto súvisiace stránky}}: $1.",
+	"editsimilar-thanks-notsimilar": "Ďakujeme za váš príspevok.\n{{PLURAL:$2|Tejto stránke|Týmto stránkam}} by sa tiež hodilo, keby ste sa na {{PLURAL:$2|ňu|ne}} pozreli: $1.",
 	"editsimilar-thankyou": "Ďakujeme za váš príspevok, $1!",
 	"editsimilar-link-disable": "nastaviť voľby",
 	"tog-edit-similar": "Zapnúť návrhy podobných stránok"

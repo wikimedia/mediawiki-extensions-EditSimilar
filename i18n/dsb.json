@@ -5,8 +5,8 @@
 		]
 	},
 	"editsimilar-desc": "Pózbuźujo wužywarjow pó składowanju boka pódobny bok wobźěłaś",
-	"editsimilar-thanks": "Źěkujomy se za twój pśinosk.\r\nWoglědaj se {{PLURAL:$2|toś ten bok|toś tej boka|toś te pódobne boki|toś te boki}}: $1.",
-	"editsimilar-thanks-notsimilar": "Źěkujomy se za twój pśinosk.\r\n{{PLURAL:$2|Toś ten bok by mógł|Toś tej boka by mógłej|Toś te boki by mógli|Toś te  boki by mógli}} teke twóju pomoc wužywaś: $1.",
+	"editsimilar-thanks": "Źěkujomy se za twój pśinosk.\nWoglědaj se {{PLURAL:$2|toś ten bok|toś tej boka|toś te pódobne boki|toś te boki}}: $1.",
+	"editsimilar-thanks-notsimilar": "Źěkujomy se za twój pśinosk.\n{{PLURAL:$2|Toś ten bok by mógł|Toś tej boka by mógłej|Toś te boki by mógli|Toś te  boki by mógli}} teke twóju pomoc wužywaś: $1.",
 	"editsimilar-thankyou": "Źěkujomy se za twój pśinosk, $1!",
 	"editsimilar-link-disable": "preference nastajiś",
 	"tog-edit-similar": "Naraźenja za pódobne boki zmóžniś"

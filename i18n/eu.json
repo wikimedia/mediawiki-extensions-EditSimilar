@@ -4,7 +4,7 @@
 			"Kobazulo"
 		]
 	},
-	"editsimilar-thanks": "Mila esker egindako ekarpenagatik.\r\n\r\nBegira {{PLURAL:$2|ezazu lotutako orrialde hau|itzazu lotutako orrialde hauek}}: $1.",
+	"editsimilar-thanks": "Mila esker egindako ekarpenagatik.\n\nBegira {{PLURAL:$2|ezazu lotutako orrialde hau|itzazu lotutako orrialde hauek}}: $1.",
 	"editsimilar-thankyou": "Mila esker egindako ekarpenagatik, $1!",
 	"editsimilar-link-disable": "hobespenak ezarri"
 }

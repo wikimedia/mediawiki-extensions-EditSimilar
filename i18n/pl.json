@@ -8,8 +8,8 @@
 		]
 	},
 	"editsimilar-desc": "Zachęca do edycji podobnego artykułu po zapisaniu strony",
-	"editsimilar-thanks": "Dziękujemy za edycję.\r\nSprawdź też {{PLURAL:$2|podobny artykuł|podobne artykuły:}} $1.",
-	"editsimilar-thanks-notsimilar": "Dziękujemy za edycję.\r\n{{PLURAL:$2|Jest jeszcze jeden artykuł przy którym możesz pomóc –|Artykuły przy których również możesz pomóc:}} $1.",
+	"editsimilar-thanks": "Dziękujemy za edycję.\nSprawdź też {{PLURAL:$2|podobny artykuł|podobne artykuły:}} $1.",
+	"editsimilar-thanks-notsimilar": "Dziękujemy za edycję.\n{{PLURAL:$2|Jest jeszcze jeden artykuł przy którym możesz pomóc –|Artykuły przy których również możesz pomóc:}} $1.",
 	"editsimilar-thankyou": "Dziękujemy za Twoją edycję, $1!",
 	"editsimilar-link-disable": "zmień ustawienia",
 	"tog-edit-similar": "Włącz sugestie edycji podobnych artykułów"

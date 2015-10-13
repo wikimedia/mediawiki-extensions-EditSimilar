@@ -5,8 +5,8 @@
 		]
 	},
 	"editsimilar-desc": "Pozbudźuješ wužiwarjow po składowanju strony podobnu stronu wobdźěłać",
-	"editsimilar-thanks": "Dźakujemy so za twój přinošk.\r\nWobhladaj sej {{PLURAL:$2|tutu přiwuznu stronu|tutej přiwuznej stronje|tute přiwuzne strony|tute přiwuzne strony}}: $1.",
-	"editsimilar-thanks-notsimilar": "Dźakujemy so za twój přinošk.\r\n{{PLURAL:$2|Tuta strona móhła|Tutej stronje móhłoj|Tute strony móhli|Tute strony móhli}} tež twoju pomoc wužiwać: $1.",
+	"editsimilar-thanks": "Dźakujemy so za twój přinošk.\nWobhladaj sej {{PLURAL:$2|tutu přiwuznu stronu|tutej přiwuznej stronje|tute přiwuzne strony|tute přiwuzne strony}}: $1.",
+	"editsimilar-thanks-notsimilar": "Dźakujemy so za twój přinošk.\n{{PLURAL:$2|Tuta strona móhła|Tutej stronje móhłoj|Tute strony móhli|Tute strony móhli}} tež twoju pomoc wužiwać: $1.",
 	"editsimilar-thankyou": "Dźakujemy so za twój přinošk, $1!",
 	"editsimilar-link-disable": "Preferency nastajić",
 	"tog-edit-similar": "Namjety za podobne strony zmóžnić"

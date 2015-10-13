@@ -5,8 +5,8 @@
 		]
 	},
 	"editsimilar-desc": "Mengajak pengguna untuk menyunting halaman yang sejenis setelah menyimpan sebuah halaman",
-	"editsimilar-thanks": "Terima kasih untuk kontribusi Anda.\r\nLihat pula {{PLURAL:$2|halaman|halaman}} yang berhubungan dengan ini: $1.",
-	"editsimilar-thanks-notsimilar": "Terima kasih untuk kontribusi Anda.\r\n{{PLURAL:$2|Halaman|Halaman}} ini mungkin juga memerlukan bantuan Anda: $1.",
+	"editsimilar-thanks": "Terima kasih untuk kontribusi Anda.\nLihat pula {{PLURAL:$2|halaman|halaman}} yang berhubungan dengan ini: $1.",
+	"editsimilar-thanks-notsimilar": "Terima kasih untuk kontribusi Anda.\n{{PLURAL:$2|Halaman|Halaman}} ini mungkin juga memerlukan bantuan Anda: $1.",
 	"editsimilar-thankyou": "Terima kasih untuk kontribusi Anda, $1!",
 	"editsimilar-link-disable": "pasang preferensi",
 	"tog-edit-similar": "Nyalakan usulan halaman serupa"
