@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Revi"
+		]
+	},
+	"editsimilar-desc": "문서를 저장한 후 비슷한 종류의 문서를 편집하도록 권합니다",
+	"editsimilar-thanks": "기여에 감사드립니다.\n{{PLURAL:$2|관련된 문서}}를 찾아보세요: $1",
+	"editsimilar-thanks-notsimilar": "기여에 감사드립니다.\n{{PLURAL:$2|이 문서}}가 당신의 도움을 받을 수 있을 지도 모릅니다: $1",
+	"editsimilar-thankyou": "$1 님, 기여에 감사드립니다!",
+	"editsimilar-link-disable": "환경설정",
+	"tog-edit-similar": "비슷한 문서 추천 받기"
+}
