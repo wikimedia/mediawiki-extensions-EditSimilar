@@ -251,8 +251,6 @@ class EditSimilar {
 	 * @return array Array of Title objects
 	 */
 	function idsToTitles( $idArray ) {
-		global $wgContentNamespaces;
-
 		$dbr = wfGetDB( DB_SLAVE );
 		$stringedNames = implode( ',', $idArray );
 		$res = $dbr->select(
@@ -267,7 +265,7 @@ class EditSimilar {
 		// so for now, to speed things up, just discard results from other namespaces (and subpages)
 		while (
 			( $x = $dbr->fetchObject( $res ) ) &&
-			( in_array( $x->page_namespace, $wgContentNamespaces ) ) &&
+			( MWNamespace::isContent( $x->page_namespace ) ) &&
 			strpos( $x->page_title, '/' ) === false
 		)
 		{
