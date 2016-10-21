@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo"
+		]
+	},
+	"editsimilar-desc": "O l'incoragisce i utenti a modificâ de paggine scimmile doppo avei sarvou una paggina",
+	"editsimilar-thanks": "Graçie pe-a contribuçion.\nAmia {{PLURAL:$2|sta paggina correlâ|ste paggine correlæ}} ascì: $1.",
+	"editsimilar-thanks-notsimilar": "Graçie pe-a to contribuçion.\n{{PLURAL:$2|Sta paggina ascì a poriæ|Ste paggine ascì porieivan}} usufruî do to agiutto: $1.",
+	"editsimilar-thankyou": "Graçie pe-a to contribuçion, $1!",
+	"editsimilar-link-disable": "imposta e preferençe",
+	"tog-edit-similar": "Attiva i suggerimenti de paggine scimmile"
+}
