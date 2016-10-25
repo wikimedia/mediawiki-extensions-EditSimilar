@@ -1,4 +1,8 @@
 {
-	"@metadata": [],
-	"editsimilar-link-disable": "postavi podešavanja"
+	"@metadata": {
+		"authors": [
+			"Сербијана"
+		]
+	},
+	"editsimilar-link-disable": "podesi postavke"
 }
