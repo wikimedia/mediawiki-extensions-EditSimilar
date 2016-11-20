@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200"
+		]
+	},
+	"editsimilar-desc": "Skatina vartotojus redaguoti panašų puslapį po puslapio išsaugojimo",
+	"editsimilar-thanks": "Ačiū už jūsų įnašą.\nŽiūrėkite {{PLURAL:$2|susijusį puslapį|Susijusius puslapius}}: $1.",
+	"editsimilar-thanks-notsimilar": "Ačiū už jūsų įnašą.\n{{PLURAL:$2|Šiam puslapiui|Šiems puslapiams}} taip pat reikia jūsų pagalbos: $1.",
+	"editsimilar-thankyou": "Ačiū už jūsų įnašą, $1!",
+	"editsimilar-link-disable": "nustatyti parinktis",
+	"tog-edit-similar": "Įgalinti panašių puslapių pasiūlymus"
+}
