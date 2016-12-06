@@ -22,6 +22,12 @@
  * commanding article.
  *
  * @file
+ * @ingroup Extensions
+ * @author Bartek Łapiński <bartek@wikia-inc.com>
+ * @author Łukasz Garczewski (TOR) <tor@wikia-inc.com>
+ * @copyright Copyright © 2008, Wikia Inc.
+ * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
+ * @link https://www.mediawiki.org/wiki/Extension:EditSimilar Documentation
  */
 
 class EditSimilar {

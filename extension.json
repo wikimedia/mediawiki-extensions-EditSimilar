@@ -1,0 +1,48 @@
+{
+	"name": "EditSimilar",
+	"version": "1.25",
+	"author": [
+		"Bartek Łapiński",
+		"Łukasz Garczewski"
+	],
+	"license-name": "GPL-2.0+",
+	"url": "https://www.mediawiki.org/wiki/Extension:EditSimilar",
+	"descriptionmsg": "editsimilar-desc",
+	"type": "other",
+	"config": {
+		"EditSimilarMaxResultsPool": 50,
+		"EditSimilarMaxResultsToDisplay": 3,
+		"EditSimilarCounterValue": 1
+	},
+	"MessagesDirs": {
+		"EditSimilar": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"EditSimilar": "EditSimilar.class.php",
+		"EditSimilarHooks": "EditSimilar.hooks.php"
+	},
+	"Hooks": {
+		"PageContentSaveComplete": [
+			"EditSimilarHooks::onPageContentSaveComplete"
+		],
+		"OutputPageBeforeHTML": [
+			"EditSimilarHooks::onOutputPageBeforeHTML"
+		],
+		"GetPreferences": [
+			"EditSimilarHooks::onGetPreferences"
+		]
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "EditSimilar"
+	},
+	"ResourceModules": {
+		"ext.editSimilar": {
+			"styles": "EditSimilar.css",
+			"position": "top"
+		}
+	},
+	"manifest_version": 1
+}
