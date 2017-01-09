@@ -221,21 +221,15 @@ class EditSimilar {
 	 * This is to ensure we can get always (well, almost - if "marker"
 	 * categories get no results, it's dead in the water anyway) some results.
 	 *
-	 * @return array Array of category names
+	 * @return array Array of page IDs
 	 */
 	function getAdditionalCheck() {
 		$dbr = wfGetDB( DB_SLAVE );
 
-		$fixedNames = array();
-		foreach ( $this->mAttentionMarkers as $category ) {
-			$fixedNames[] = $dbr->addQuotes( $category );
-		}
-		$stringedNames = implode( ',', $fixedNames );
-
 		$res = $dbr->select(
 			'categorylinks',
 			array( 'cl_from' ),
-			array( "cl_to IN ($stringedNames)" ),
+			array( 'cl_to' => $this->mAttentionMarkers ),
 			__METHOD__
 		);
 
@@ -258,11 +252,11 @@ class EditSimilar {
 	 */
 	function idsToTitles( $idArray ) {
 		$dbr = wfGetDB( DB_SLAVE );
-		$stringedNames = implode( ',', $idArray );
+
 		$res = $dbr->select(
 			'page',
 			array( 'page_namespace', 'page_title' ),
-			array( "page_id IN ($stringedNames)" ),
+			array( 'page_id' => $idArray ),
 			__METHOD__
 		);
 
@@ -300,22 +294,20 @@ class EditSimilar {
 			return $resultArray;
 		}
 
-		// @todo CHECKME: is it possible to make this query use MediaWiki's
-		// Database functions? If so, rewrite it!
-		$query = "SELECT c1.cl_from
-				FROM {$dbr->tableName( 'categorylinks' )} AS c1, {$dbr->tableName( 'categorylinks' )} AS c2
-				WHERE c1.cl_from = c2.cl_from
-				AND c1.cl_to = " . $dbr->addQuotes( $title->getDBkey() ) . "
-				AND c2.cl_to IN (";
+		$res = $dbr->select(
+			array(
+				'c1' => 'categorylinks',
+				'c2' => 'categorylinks',
+			),
+			array( 'c1.cl_from' ),
+			array(
+				'c1.cl_from = c2.cl_from',
+				'c1.cl_to' => $title->getDBkey(),
+				'c2.cl_to' => $this->mBaseCategories
+			),
+			__METHOD__
+		);
 
-		$fixedNames = array();
-		foreach ( $this->mBaseCategories as $category ) {
-			$fixedNames[] = $dbr->addQuotes( $category );
-		}
-		$stringed_names = implode( ',', $fixedNames );
-		$query .= $stringed_names . ')';
-
-		$res = $dbr->query( $query, __METHOD__ );
 		foreach ( $res as $x ) {
 			if ( $this->mBaseArticle != $x->cl_from ) {
 				$resultArray[] = $x->cl_from;
