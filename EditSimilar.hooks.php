@@ -17,7 +17,7 @@ class EditSimilarHooks {
 	 * Check if we had the extension enabled at all and if the current page is in a
 	 * content namespace.
 	 *
-	 * @param Article $article The page that was edited
+	 * @param WikiPage $wikiPage The page that was edited
 	 * @param User $user The user who performed the edit
 	 * @param Content $content [unused]
 	 * @param string $summary Edit summary [unused]
@@ -28,15 +28,16 @@ class EditSimilarHooks {
 	 * @param Revision $revision [unused]
 	 * @param Status $status [unused]
 	 * @param int|bool $baseRevId [unused]
+	 *
 	 * @return bool
 	 */
 	public static function onPageContentSaveComplete(
-			$article, $user, $content, $summary, $isMinor,
+		WikiPage $wikiPage, $user, $content, $summary, $isMinor,
 			$isWatch, $section, $flags, $revision, $status, $baseRevId
 		) {
 		global $wgContentNamespaces;
 
-		$namespace = $article->getTitle()->getNamespace();
+		$namespace = $wikiPage->getTitle()->getNamespace();
 		if (
 			( $user->getOption( 'edit-similar', 1 ) == 1 ) &&
 			( in_array( $namespace, $wgContentNamespaces ) )
