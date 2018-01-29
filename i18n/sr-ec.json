@@ -2,8 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Rancher",
-			"Михајло Анђелковић"
+			"Михајло Анђелковић",
+			"Zoranzoki21"
 		]
 	},
-	"editsimilar-link-disable": "подеси поставке"
+	"editsimilar-link-disable": "подеси подешавања"
 }
