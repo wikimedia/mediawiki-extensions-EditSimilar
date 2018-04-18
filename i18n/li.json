@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ooswesthoesbes"
+		]
+	},
+	"editsimilar-desc": "Meujig gebroekers aan gelieksäörtige pagina's te bewirke nao 't opslaon van 'n pagina",
+	"editsimilar-thanks": "Danke veur dien biedraag.\n{{PLURAL:$2|De gerelateerde pagina $1 kan|De gerelateerde pagina's $1 kónne}} ouch dien hölp broeke.",
+	"editsimilar-thanks-notsimilar": "Danke veur dien biedraag.\n{{PLURAL:$2|De pagina $1 kan|De pagina's $1 kónne}} ouch dien hölp broeke.",
+	"editsimilar-thankyou": "Danke veur dien biedraag, $1!",
+	"editsimilar-link-disable": "stèl veurkäöre in",
+	"tog-edit-similar": "Sjakel gelieksäörtige paginasuggesties in"
+}
