@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Konsnos",
-			"ZaDiak"
+			"ZaDiak",
+			"Nikosgranturismogt"
 		]
 	},
 	"editsimilar-desc": "Παροτρύνει τους χρήστες να επεξεργαστούν παρόμοιες σελίδες αφού αποθήκευσαν μία σελίδα",
+	"editsimilar-thankyou": "Σας ευχαριστούμε για την συνεισφορά σας, $1!",
 	"editsimilar-link-disable": "ρύθμιση προτιμήσεων"
 }
