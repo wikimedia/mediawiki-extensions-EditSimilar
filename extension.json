@@ -1,6 +1,6 @@
 {
 	"name": "EditSimilar",
-	"version": "1.25",
+	"version": "1.26",
 	"author": [
 		"Bartek Łapiński",
 		"Łukasz Garczewski"
@@ -24,15 +24,9 @@
 		"EditSimilarHooks": "EditSimilar.hooks.php"
 	},
 	"Hooks": {
-		"PageContentSaveComplete": [
-			"EditSimilarHooks::onPageContentSaveComplete"
-		],
-		"OutputPageBeforeHTML": [
-			"EditSimilarHooks::onOutputPageBeforeHTML"
-		],
-		"GetPreferences": [
-			"EditSimilarHooks::onGetPreferences"
-		]
+		"PageContentSaveComplete": "EditSimilarHooks::onPageContentSaveComplete",
+		"OutputPageBeforeHTML": "EditSimilarHooks::onOutputPageBeforeHTML",
+		"GetPreferences": "EditSimilarHooks::onGetPreferences"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
@@ -40,8 +34,7 @@
 	},
 	"ResourceModules": {
 		"ext.editSimilar": {
-			"styles": "EditSimilar.css",
-			"position": "top"
+			"styles": "EditSimilar.css"
 		}
 	},
 	"manifest_version": 1

@@ -28,8 +28,6 @@ class EditSimilarHooks {
 	 * @param Revision $revision [unused]
 	 * @param Status $status [unused]
 	 * @param int|bool $baseRevId [unused]
-	 *
-	 * @return bool
 	 */
 	public static function onPageContentSaveComplete(
 		WikiPage $wikiPage, $user, $content, $summary, $isMinor,
@@ -45,7 +43,6 @@ class EditSimilarHooks {
 		{
 			$_SESSION['ES_saved'] = 'yes';
 		}
-		return true;
 	}
 
 	/**
@@ -53,7 +50,6 @@ class EditSimilarHooks {
 	 *
 	 * @param OutputPage $out
 	 * @param string $text [unused]
-	 * @return bool
 	 */
 	public static function onOutputPageBeforeHTML( OutputPage &$out, &$text ) {
 		global $wgUser, $wgEditSimilarAlwaysShowThanks;
@@ -71,6 +67,7 @@ class EditSimilarHooks {
 				// here we'll populate the similar articles and links
 				$instance = new EditSimilar( $title->getArticleID(), 'category' );
 				$similarities = $instance->getSimilarArticles();
+				$messageText = '';
 
 				if ( !empty( $similarities ) ) {
 					global $wgLang;
@@ -102,8 +99,6 @@ class EditSimilarHooks {
 			// display that only once
 			$_SESSION['ES_saved'] = '';
 		}
-
-		return true;
 	}
 
 	/**
@@ -112,15 +107,13 @@ class EditSimilarHooks {
 	 *
 	 * @param User $user
 	 * @param Preferences $preferences
-	 * @return bool
 	 */
 	public static function onGetPreferences( $user, &$preferences ) {
-		$preferences['edit-similar'] = array(
+		$preferences['edit-similar'] = [
 			'type' => 'toggle',
 			'section' => 'editing',
 			'label-message' => 'tog-edit-similar',
-		);
-		return true;
+		];
 	}
 
 }

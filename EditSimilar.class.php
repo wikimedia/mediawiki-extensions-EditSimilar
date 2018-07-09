@@ -96,7 +96,7 @@ class EditSimilar {
 			return false;
 		} else {
 			$lines = preg_split( '/\*/', $stubCategories->text() );
-			$normalisedLines = array();
+			$normalisedLines = [];
 			array_shift( $lines );
 			foreach ( $lines as $line ) {
 				$normalisedLines[] = str_replace( ' ', '_', trim( $line ) );
@@ -119,7 +119,7 @@ class EditSimilar {
 		}
 
 		$text = '';
-		$articles = array();
+		$articles = [];
 		$x = 0;
 
 		while (
@@ -148,7 +148,7 @@ class EditSimilar {
 		}
 
 		if ( count( $articles ) == 1 ) { // in this case, array_rand returns a single element, not an array
-			$rand_articles = array( 0 );
+			$rand_articles = [ 0 ];
 		} else {
 			$rand_articles = array_rand(
 				$articles,
@@ -156,13 +156,13 @@ class EditSimilar {
 			);
 		}
 
-		$realRandValues = array();
+		$realRandValues = [];
 
 		if ( empty( $rand_articles ) ) {
 			return false;
 		}
 
-		$translatedTitles = array();
+		$translatedTitles = [];
 		foreach ( $rand_articles as $r_key => $rand_article_key ) {
 			$translatedTitles[] = $articles[$rand_article_key];
 		}
@@ -187,17 +187,17 @@ class EditSimilar {
 			return false;
 		}
 
-		$dbr = wfGetDB( DB_SLAVE );
-		$resultArray = array();
+		$dbr = wfGetDB( DB_REPLICA );
+		$resultArray = [];
 		$res = $dbr->select(
-			array( 'categorylinks' ),
-			array( 'cl_to' ),
-			array( 'cl_from' => $this->mBaseArticle ),
+			[ 'categorylinks' ],
+			[ 'cl_to' ],
+			[ 'cl_from' => $this->mBaseArticle ],
 			__METHOD__,
-			array(
+			[
 				'ORDER BY' => 'cl_from',
 				'USE INDEX' => 'cl_from'
-			)
+			]
 		);
 
 		foreach ( $res as $x ) {
@@ -224,16 +224,16 @@ class EditSimilar {
 	 * @return array Array of page IDs
 	 */
 	function getAdditionalCheck() {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$res = $dbr->select(
 			'categorylinks',
-			array( 'cl_from' ),
-			array( 'cl_to' => $this->mAttentionMarkers ),
+			[ 'cl_from' ],
+			[ 'cl_to' => $this->mAttentionMarkers ],
 			__METHOD__
 		);
 
-		$resultArray = array();
+		$resultArray = [];
 		foreach ( $res as $x ) {
 			if ( $this->mBaseArticle != $x->cl_from ) {
 				$resultArray[] = $x->cl_from;
@@ -251,16 +251,16 @@ class EditSimilar {
 	 * @return array Array of Title objects
 	 */
 	function idsToTitles( $idArray ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$res = $dbr->select(
 			'page',
-			array( 'page_namespace', 'page_title' ),
-			array( 'page_id' => $idArray ),
+			[ 'page_namespace', 'page_title' ],
+			[ 'page_id' => $idArray ],
 			__METHOD__
 		);
 
-		$resultArray = array();
+		$resultArray = [];
 
 		// so for now, to speed things up, just discard results from other namespaces (and subpages)
 		while (
@@ -286,25 +286,25 @@ class EditSimilar {
 	 * @return array Array of category names
 	 */
 	function getResults( $markerCategory ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$title = Title::makeTitle( NS_CATEGORY, $markerCategory );
-		$resultArray = array();
+		$resultArray = [];
 
 		if ( empty( $this->mBaseCategories ) ) {
 			return $resultArray;
 		}
 
 		$res = $dbr->select(
-			array(
+			[
 				'c1' => 'categorylinks',
 				'c2' => 'categorylinks',
-			),
-			array( 'c1.cl_from' ),
-			array(
+			],
+			[ 'c1.cl_from' ],
+			[
 				'c1.cl_from = c2.cl_from',
 				'c1.cl_to' => $title->getDBkey(),
 				'c2.cl_to' => $this->mBaseCategories
-			),
+			],
 			__METHOD__
 		);
 
