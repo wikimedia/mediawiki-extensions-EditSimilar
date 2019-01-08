@@ -4,5 +4,10 @@
 			"Joetaras"
 		]
 	},
-	"editsimilar-link-disable": "'mboste le preferenze"
+	"editsimilar-desc": "'Ngoragge le utinde a cangià le pàggene simile apprisse ca ha state reggistrate 'na pàgene",
+	"editsimilar-thanks": "Grazie pu condrebbute.\n'Ndruche pure {{PLURAL:$2|sta pàgene|ste pàggene}} correlate: $1.",
+	"editsimilar-thanks-notsimilar": "Grazie pu condrebbute.\nPure {{PLURAL:$2|sta pàgene pò|ste pàggene ponne}} avè abbesogne de l'aijute tune: $1.",
+	"editsimilar-thankyou": "Grazie pu condrebbute tune, $1!",
+	"editsimilar-link-disable": "'mboste le preferenze",
+	"tog-edit-similar": "Attive suggereminde de pàggene simile"
 }
