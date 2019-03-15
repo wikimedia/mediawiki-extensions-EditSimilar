@@ -106,9 +106,9 @@ class EditSimilarHooks {
 	 * extension on a per-user basis.
 	 *
 	 * @param User $user
-	 * @param Preferences $preferences
+	 * @param mixed[] &$preferences
 	 */
-	public static function onGetPreferences( $user, &$preferences ) {
+	public static function onGetPreferences( $user, array &$preferences ) {
 		$preferences['edit-similar'] = [
 			'type' => 'toggle',
 			'section' => 'editing',
