@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"editsimilar-desc": "Ohrabruje korisnike za uređuju slične stranice nakon spremanja",
+	"editsimilar-thanks": "Hvala Vam na doprinosu.\nPogledajte {{PLURAL:$2|ovu povezanu stranicu|ove povezane stranice}}: $1.",
+	"editsimilar-thanks-notsimilar": "Hvala Vam na doprinosima.\nVaša pomoć je potrebna i {{PLURAL:$2|ovoj stranici|ovim stranicama}}: $1.",
+	"editsimilar-thankyou": "Korisniče $1, hvala Vam na doprinosima!",
+	"editsimilar-link-disable": "postavi prilagođavanja",
+	"tog-edit-similar": "Omogući sugestije za uređivanje sličnih stranica"
+}
