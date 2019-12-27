@@ -26,7 +26,7 @@
  * @author Bartek Łapiński <bartek@wikia-inc.com>
  * @author Łukasz Garczewski (TOR) <tor@wikia-inc.com>
  * @copyright Copyright © 2008, Wikia Inc.
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
+ * @license GPL-2.0-or-later
  * @link https://www.mediawiki.org/wiki/Extension:EditSimilar Documentation
  */
 
@@ -86,7 +86,7 @@ class EditSimilar {
 	 * Fetch categories marked as 'stub categories', controlled via the
 	 * MediaWiki:EditSimilar-Categories interface message.
 	 *
-	 * @return array|boolean Array of category names on success, false on
+	 * @return array|bool Array of category names on success, false on
 	 *                       failure (if MediaWiki:EditSimilar-Categories is
 	 *                       empty or contains -)
 	 */
@@ -125,8 +125,7 @@ class EditSimilar {
 		while (
 			( count( $articles ) < $wgEditSimilarMaxResultsToDisplay ) &&
 			( $x < count( $this->mAttentionMarkers ) )
-		)
-		{
+		) {
 			$articles = array_merge(
 				$articles,
 				$this->getResults( $this->mAttentionMarkers[$x] )
@@ -147,7 +146,8 @@ class EditSimilar {
 			$this->mSimilarArticles = false;
 		}
 
-		if ( count( $articles ) == 1 ) { // in this case, array_rand returns a single element, not an array
+		if ( count( $articles ) == 1 ) {
+			// in this case, array_rand returns a single element, not an array
 			$rand_articles = [ 0 ];
 		} else {
 			$rand_articles = array_rand(
@@ -267,8 +267,7 @@ class EditSimilar {
 			( $x = $dbr->fetchObject( $res ) ) &&
 			( MWNamespace::isContent( $x->page_namespace ) ) &&
 			strpos( $x->page_title, '/' ) === false
-		)
-		{
+		) {
 			$resultArray[] = Title::makeTitle(
 				$x->page_namespace,
 				$x->page_title

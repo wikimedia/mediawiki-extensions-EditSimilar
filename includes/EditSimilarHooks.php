@@ -7,7 +7,7 @@
  * @author Bartek Łapiński <bartek@wikia-inc.com>
  * @author Łukasz Garczewski (TOR) <tor@wikia-inc.com>
  * @copyright Copyright © 2008, Wikia Inc.
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
+ * @license GPL-2.0-or-later
  * @link https://www.mediawiki.org/wiki/Extension:EditSimilar Documentation
  */
 
@@ -39,8 +39,7 @@ class EditSimilarHooks {
 		if (
 			( $user->getOption( 'edit-similar', 1 ) == 1 ) &&
 			( in_array( $namespace, $wgContentNamespaces ) )
-		)
-		{
+		) {
 			$_SESSION['ES_saved'] = 'yes';
 		}
 	}
@@ -58,8 +57,7 @@ class EditSimilarHooks {
 			!empty( $_SESSION['ES_saved'] ) &&
 			( $wgUser->getOption( 'edit-similar', 1 ) == 1 ) &&
 			$out->isArticle()
-		)
-		{
+		) {
 			if ( EditSimilar::checkCounter() ) {
 				$message_text = '';
 				$title = $out->getTitle();
@@ -78,7 +76,8 @@ class EditSimilarHooks {
 							$wgLang->listToText( $similarities ),
 							count( $similarities )
 						)->parse();
-					} else { // the articles we found were rather just articles needing attention
+					} else {
+						// the articles we found were rather just articles needing attention
 						$messageText = wfMessage(
 							'editsimilar-thanks-notsimilar',
 							$wgLang->listToText( $similarities ),

@@ -20,8 +20,8 @@
 		]
 	},
 	"AutoloadClasses": {
-		"EditSimilar": "EditSimilar.class.php",
-		"EditSimilarHooks": "EditSimilar.hooks.php"
+		"EditSimilar": "includes/EditSimilar.php",
+		"EditSimilarHooks": "includes/EditSimilarHooks.php"
 	},
 	"Hooks": {
 		"PageContentSaveComplete": "EditSimilarHooks::onPageContentSaveComplete",
@@ -29,8 +29,8 @@
 		"GetPreferences": "EditSimilarHooks::onGetPreferences"
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": "EditSimilar"
+		"localBasePath": "resources",
+		"remoteExtPath": "EditSimilar/resources"
 	},
 	"ResourceModules": {
 		"ext.editSimilar": {
