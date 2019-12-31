@@ -51,11 +51,12 @@ class EditSimilarHooks {
 	 * @param string $text [unused]
 	 */
 	public static function onOutputPageBeforeHTML( OutputPage &$out, &$text ) {
-		global $wgUser, $wgEditSimilarAlwaysShowThanks;
+		global $wgEditSimilarAlwaysShowThanks;
+		$user = $out->getUser();
 
 		if (
 			!empty( $_SESSION['ES_saved'] ) &&
-			( $wgUser->getOption( 'edit-similar', 1 ) == 1 ) &&
+			( $user->getOption( 'edit-similar', 1 ) == 1 ) &&
 			$out->isArticle()
 		) {
 			if ( EditSimilar::checkCounter() ) {
@@ -85,8 +86,8 @@ class EditSimilarHooks {
 						)->parse();
 					}
 				} else {
-					if ( $wgUser->isLoggedIn() && !empty( $wgEditSimilarAlwaysShowThanks ) ) {
-						$messageText = wfMessage( 'editsimilar-thankyou', $wgUser->getName() )->parse();
+					if ( $user->isLoggedIn() && !empty( $wgEditSimilarAlwaysShowThanks ) ) {
+						$messageText = wfMessage( 'editsimilar-thankyou', $user->getName() )->parse();
 					}
 				}
 
