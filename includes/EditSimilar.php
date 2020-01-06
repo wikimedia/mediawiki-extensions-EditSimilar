@@ -38,13 +38,7 @@ class EditSimilar {
 	public $mBaseArticle;
 
 	/**
-	 * @var string $mMarkerType How do we mark articles that need attention?
-	 *                          Currently, by category only
-	 */
-	public $mMarkerType;
-
-	/**
-	 * @var array $mAttentionMarkers The marker array (for now it contains categories)
+	 * @var array $mAttentionMarkers The marker array; contains categories
 	 */
 	public $mAttentionMarkers;
 
@@ -70,12 +64,10 @@ class EditSimilar {
 	 * Constructor
 	 *
 	 * @param int $article Article ID number
-	 * @param string $markerType Always 'category'
 	 */
-	public function __construct( $article, $markerType = 'category' ) {
+	public function __construct( $article ) {
 		global $wgEditSimilarMaxResultsPool;
 		$this->mBaseArticle = $article;
-		$this->mMarkerType = $markerType;
 		$this->mAttentionMarkers = $this->getStubCategories();
 		$this->mPoolLimit = $wgEditSimilarMaxResultsPool;
 		$this->mBaseCategories = $this->getBaseCategories();

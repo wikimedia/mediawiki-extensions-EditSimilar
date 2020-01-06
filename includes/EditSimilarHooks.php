@@ -52,6 +52,7 @@ class EditSimilarHooks {
 	 */
 	public static function onOutputPageBeforeHTML( OutputPage &$out, &$text ) {
 		global $wgEditSimilarAlwaysShowThanks;
+
 		$user = $out->getUser();
 
 		if (
@@ -64,7 +65,7 @@ class EditSimilarHooks {
 				$title = $out->getTitle();
 				$articleTitle = $title->getText();
 				// here we'll populate the similar articles and links
-				$instance = new EditSimilar( $title->getArticleID(), 'category' );
+				$instance = new EditSimilar( $title->getArticleID() );
 				$similarities = $instance->getSimilarArticles();
 				$messageText = '';
 
