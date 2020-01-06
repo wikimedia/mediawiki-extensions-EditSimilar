@@ -72,14 +72,14 @@ class EditSimilarHooks {
 					global $wgLang;
 
 					if ( $instance->mSimilarArticles ) {
-						$messageText = wfMessage(
+						$messageText = $out->msg(
 							'editsimilar-thanks',
 							$wgLang->listToText( $similarities ),
 							count( $similarities )
 						)->parse();
 					} else {
 						// the articles we found were rather just articles needing attention
-						$messageText = wfMessage(
+						$messageText = $out->msg(
 							'editsimilar-thanks-notsimilar',
 							$wgLang->listToText( $similarities ),
 							count( $similarities )
@@ -87,7 +87,10 @@ class EditSimilarHooks {
 					}
 				} else {
 					if ( $user->isLoggedIn() && !empty( $wgEditSimilarAlwaysShowThanks ) ) {
-						$messageText = wfMessage( 'editsimilar-thankyou', $user->getName() )->parse();
+						$messageText = $out->msg(
+							'editsimilar-thankyou',
+							$user->getName()
+						)->parse();
 					}
 				}
 
