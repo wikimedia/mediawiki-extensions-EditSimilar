@@ -63,26 +63,23 @@ class EditSimilarHooks {
 			if ( EditSimilar::checkCounter() ) {
 				$message_text = '';
 				$title = $out->getTitle();
-				$articleTitle = $title->getText();
 				// here we'll populate the similar articles and links
 				$instance = new EditSimilar( $title->getArticleID() );
 				$similarities = $instance->getSimilarArticles();
 				$messageText = '';
 
 				if ( !empty( $similarities ) ) {
-					global $wgLang;
-
 					if ( $instance->mSimilarArticles ) {
 						$messageText = $out->msg(
 							'editsimilar-thanks',
-							$wgLang->listToText( $similarities ),
+							$out->getLanguage()->listToText( $similarities ),
 							count( $similarities )
 						)->parse();
 					} else {
 						// the articles we found were rather just articles needing attention
 						$messageText = $out->msg(
 							'editsimilar-thanks-notsimilar',
-							$wgLang->listToText( $similarities ),
+							$out->getLanguage()->listToText( $similarities ),
 							count( $similarities )
 						)->parse();
 					}
@@ -96,7 +93,7 @@ class EditSimilarHooks {
 				}
 
 				if ( $messageText != '' ) {
-					EditSimilar::showMessage( $messageText, $articleTitle );
+					EditSimilar::showMessage( $out, $messageText );
 				}
 			}
 

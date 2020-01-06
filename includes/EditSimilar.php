@@ -311,25 +311,26 @@ class EditSimilar {
 	/**
 	 * Message box wrapper
 	 *
+	 * @param OutputPage $out
 	 * @param string $text Message to show
 	 */
-	public static function showMessage( $text ) {
-		global $wgOut, $wgScript;
+	public static function showMessage( $out, $text ) {
+		global $wgScript;
 
-		$wgOut->addModuleStyles( 'ext.editSimilar' );
+		$out->addModuleStyles( 'ext.editSimilar' );
 
 		// If the user is logged in, give them a link to their preferences in
 		// case if they want to disable EditSimilar suggestions
-		if ( RequestContext::getMain()->getUser()->isLoggedIn() ) {
+		if ( $out->getUser()->isLoggedIn() ) {
 			$link = '<div class="editsimilar_dismiss">[<span class="plainlinks"><a href="' .
 				$wgScript . '?title=Special:Preferences#mw-prefsection-editing" id="editsimilar_preferences">' .
-				wfMessage( 'editsimilar-link-disable' )->plain() .
+				$out->msg( 'editsimilar-link-disable' )->plain() .
 				'</a></span>]</div><div style="display:block">&#160;</div>';
 		} else {
 			$link = '';
 		}
 
-		$wgOut->addHTML(
+		$out->addHTML(
 			'<div id="editsimilar_links" class="usermessage editsimilar"><div>' .
 			$text . '</div>' . $link . '</div>'
 		);
