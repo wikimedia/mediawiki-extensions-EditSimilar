@@ -47,8 +47,8 @@ class EditSimilarHooks {
 	/**
 	 * Show a message, depending on settings and the relevancy of the results.
 	 *
-	 * @param OutputPage $out
-	 * @param string $text [unused]
+	 * @param OutputPage &$out
+	 * @param string &$text [unused]
 	 */
 	public static function onOutputPageBeforeHTML( OutputPage &$out, &$text ) {
 		global $wgEditSimilarAlwaysShowThanks;
