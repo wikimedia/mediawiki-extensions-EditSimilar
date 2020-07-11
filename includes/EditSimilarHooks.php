@@ -24,7 +24,7 @@ class EditSimilarHooks {
 	 * @param bool $isMinor Is the edit marked as a minor edit? [unused]
 	 * @param bool $isWatch [unused]
 	 * @param int $section [unused]
-	 * @param $flags [unused]
+	 * @param int $flags [unused]
 	 * @param Revision $revision [unused]
 	 * @param Status $status [unused]
 	 * @param int|bool $baseRevId [unused]
