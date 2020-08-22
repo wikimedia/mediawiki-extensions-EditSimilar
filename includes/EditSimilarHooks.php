@@ -12,6 +12,18 @@
  */
 
 class EditSimilarHooks {
+	/**
+	 * Register hooks depending on version
+	 */
+	public static function registerExtension() {
+		global $wgHooks;
+		if ( class_exists( MediaWiki\HookContainer\HookContainer::class ) ) {
+			// MW 1.35+
+			$wgHooks['PageSaveComplete'][] = 'EditSimilarHooks::onPageContentSaveComplete';
+		} else {
+			$wgHooks['PageContentSaveComplete'][] = 'EditSimilarHooks::onPageContentSaveComplete';
+		}
+	}
 
 	/**
 	 * Check if we had the extension enabled at all and if the current page is in a
@@ -19,19 +31,9 @@ class EditSimilarHooks {
 	 *
 	 * @param WikiPage $wikiPage The page that was edited
 	 * @param User $user The user who performed the edit
-	 * @param Content $content [unused]
-	 * @param string $summary Edit summary [unused]
-	 * @param bool $isMinor Is the edit marked as a minor edit? [unused]
-	 * @param bool $isWatch [unused]
-	 * @param int $section [unused]
-	 * @param int $flags [unused]
-	 * @param Revision $revision [unused]
-	 * @param Status $status [unused]
-	 * @param int|bool $baseRevId [unused]
 	 */
 	public static function onPageContentSaveComplete(
-		WikiPage $wikiPage, $user, $content, $summary, $isMinor,
-			$isWatch, $section, $flags, $revision, $status, $baseRevId
+		WikiPage $wikiPage, $user
 		) {
 		global $wgContentNamespaces;
 
