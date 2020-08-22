@@ -26,8 +26,8 @@
 		"EditSimilar": "includes/EditSimilar.php",
 		"EditSimilarHooks": "includes/EditSimilarHooks.php"
 	},
+	"callback": "EditSimilarHooks::registerExtension",
 	"Hooks": {
-		"PageContentSaveComplete": "EditSimilarHooks::onPageContentSaveComplete",
 		"OutputPageBeforeHTML": "EditSimilarHooks::onOutputPageBeforeHTML",
 		"GetPreferences": "EditSimilarHooks::onGetPreferences"
 	},
