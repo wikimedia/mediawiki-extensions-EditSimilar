@@ -32,30 +32,30 @@
 
 class EditSimilar {
 	/**
-	 * @var int $mBaseArticle The Article from which we hail in our quest for
+	 * @var int The Article from which we hail in our quest for
 	 *                        similiarities; this is its page ID number
 	 */
 	public $mBaseArticle;
 
 	/**
-	 * @var array $mAttentionMarkers The marker array; contains categories
+	 * @var array The marker array; contains categories
 	 */
 	public $mAttentionMarkers;
 
 	/**
-	 * @var int $mPoolLimit Limit up the pool of 'stubs' to choose from, controlled
+	 * @var int Limit up the pool of 'stubs' to choose from, controlled
 	 *               via the $wgEditSimilarMaxResultsPool global variable
 	 */
 	public $mPoolLimit;
 
 	/**
-	 * @var array $mBaseCategories Array of extracted categories that this saved
+	 * @var array Array of extracted categories that this saved
 	 *                             article is in
 	 */
 	public $mBaseCategories;
 
 	/**
-	 * @var bool $mSimilarArticles To differentiate between really similar results
+	 * @var bool To differentiate between really similar results
 	 *                             or just needing attention
 	 */
 	public $mSimilarArticles;
