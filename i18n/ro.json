@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"AdiJapan",
+			"Andreyyshore",
 			"Firilacroco",
 			"KlaudiuMihaila"
 		]
 	},
 	"editsimilar-desc": "Încurajează utilizatorii să modifice o pagină similară după salvearea unei pagini",
 	"editsimilar-thanks": "Mulțumim pentru contribuție.\nVedeți și {{PLURAL:$2|această pagină conexă|aceste pagini conexe}}: $1.",
-	"editsimilar-thanks-notsimilar": "Mulțumim pentru contribuție.\nŞi {{PLURAL:$2|această pagină|aceste pagini}} ar avea nevoie de ajutor: $1.",
+	"editsimilar-thanks-notsimilar": "Mulțumim pentru contribuție.\nȘi {{PLURAL:$2|această pagină|aceste pagini}} ar avea nevoie de ajutor: $1.",
 	"editsimilar-thankyou": "Mulțumim pentru contribuția dumneaovastră, $1!",
 	"editsimilar-link-disable": "setare preferințe",
 	"tog-edit-similar": "Activează sugestiile paginilor similare"
