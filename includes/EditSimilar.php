@@ -30,6 +30,8 @@
  * @link https://www.mediawiki.org/wiki/Extension:EditSimilar Documentation
  */
 
+use MediaWiki\MediaWikiServices;
+
 class EditSimilar {
 	/**
 	 * @var int The Article from which we hail in our quest for
@@ -160,8 +162,9 @@ class EditSimilar {
 		}
 		$translatedTitles = $this->idsToTitles( $translatedTitles );
 
+		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
 		foreach ( $translatedTitles as $linkTitle ) {
-			$articleLink = Linker::linkKnown( $linkTitle );
+			$articleLink = $linkRenderer->makeKnownLink( $linkTitle );
 			$realRandValues[] = $articleLink;
 		}
 
