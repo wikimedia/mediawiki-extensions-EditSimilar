@@ -32,9 +32,7 @@ class EditSimilarHooks {
 	 * @param WikiPage $wikiPage The page that was edited
 	 * @param User $user The user who performed the edit
 	 */
-	public static function onPageContentSaveComplete(
-		WikiPage $wikiPage, $user
-		) {
+	public static function onPageContentSaveComplete( WikiPage $wikiPage, $user ) {
 		global $wgContentNamespaces;
 
 		$namespace = $wikiPage->getTitle()->getNamespace();
@@ -63,7 +61,6 @@ class EditSimilarHooks {
 			$out->isArticle()
 		) {
 			if ( EditSimilar::checkCounter() ) {
-				$message_text = '';
 				$title = $out->getTitle();
 				// here we'll populate the similar articles and links
 				$instance = new EditSimilar( $title->getArticleID() );
