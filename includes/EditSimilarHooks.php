@@ -83,7 +83,7 @@ class EditSimilarHooks {
 						)->parse();
 					}
 				} else {
-					if ( $user->isLoggedIn() && !empty( $wgEditSimilarAlwaysShowThanks ) ) {
+					if ( $user->isRegistered() && !empty( $wgEditSimilarAlwaysShowThanks ) ) {
 						$messageText = $out->msg(
 							'editsimilar-thankyou',
 							$user->getName()

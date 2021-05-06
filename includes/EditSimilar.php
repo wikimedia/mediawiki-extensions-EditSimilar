@@ -324,7 +324,7 @@ class EditSimilar {
 
 		// If the user is logged in, give them a link to their preferences in
 		// case if they want to disable EditSimilar suggestions
-		if ( $out->getUser()->isLoggedIn() ) {
+		if ( $out->getUser()->isRegistered() ) {
 			$link = '<div class="editsimilar_dismiss">[<span class="plainlinks"><a href="' .
 				$wgScript . '?title=Special:Preferences#mw-prefsection-editing" id="editsimilar_preferences">' .
 				$out->msg( 'editsimilar-link-disable' )->plain() .
