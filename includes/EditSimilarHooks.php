@@ -12,27 +12,15 @@
  */
 
 class EditSimilarHooks {
-	/**
-	 * Register hooks depending on version
-	 */
-	public static function registerExtension() {
-		global $wgHooks;
-		if ( class_exists( MediaWiki\HookContainer\HookContainer::class ) ) {
-			// MW 1.35+
-			$wgHooks['PageSaveComplete'][] = 'EditSimilarHooks::onPageContentSaveComplete';
-		} else {
-			$wgHooks['PageContentSaveComplete'][] = 'EditSimilarHooks::onPageContentSaveComplete';
-		}
-	}
 
 	/**
 	 * Check if we had the extension enabled at all and if the current page is in a
 	 * content namespace.
 	 *
 	 * @param WikiPage $wikiPage The page that was edited
-	 * @param User $user The user who performed the edit
+	 * @param MediaWiki\User\UserIdentity $user The user who performed the edit
 	 */
-	public static function onPageContentSaveComplete( WikiPage $wikiPage, $user ) {
+	public static function onPageSaveComplete( WikiPage $wikiPage, $user ) {
 		global $wgContentNamespaces;
 
 		$namespace = $wikiPage->getTitle()->getNamespace();
