@@ -327,7 +327,7 @@ class EditSimilar {
 		if ( $out->getUser()->isRegistered() ) {
 			$link = '<div class="editsimilar_dismiss">[<span class="plainlinks"><a href="' .
 				$wgScript . '?title=Special:Preferences#mw-prefsection-editing" id="editsimilar_preferences">' .
-				$out->msg( 'editsimilar-link-disable' )->plain() .
+				$out->msg( 'editsimilar-link-disable' )->escaped() .
 				'</a></span>]</div><div style="display:block">&#160;</div>';
 		} else {
 			$link = '';

@@ -11,6 +11,8 @@
  * @link https://www.mediawiki.org/wiki/Extension:EditSimilar Documentation
  */
 
+use MediaWiki\MediaWikiServices;
+
 class EditSimilarHooks {
 
 	/**
@@ -24,8 +26,9 @@ class EditSimilarHooks {
 		global $wgContentNamespaces;
 
 		$namespace = $wikiPage->getTitle()->getNamespace();
+		$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
 		if (
-			( $user->getOption( 'edit-similar', 1 ) == 1 ) &&
+			( $userOptionsLookup->getOption( $user, 'edit-similar', 1 ) == 1 ) &&
 			( in_array( $namespace, $wgContentNamespaces ) )
 		) {
 			$_SESSION['ES_saved'] = 'yes';
@@ -42,10 +45,11 @@ class EditSimilarHooks {
 		global $wgEditSimilarAlwaysShowThanks;
 
 		$user = $out->getUser();
+		$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
 
 		if (
 			!empty( $_SESSION['ES_saved'] ) &&
-			( $user->getOption( 'edit-similar', 1 ) == 1 ) &&
+			( $userOptionsLookup->getOption( $user, 'edit-similar', 1 ) == 1 ) &&
 			$out->isArticle()
 		) {
 			if ( EditSimilar::checkCounter() ) {
