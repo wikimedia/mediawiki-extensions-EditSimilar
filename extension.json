@@ -13,9 +13,22 @@
 		"MediaWiki": ">= 1.35.0"
 	},
 	"config": {
-		"EditSimilarMaxResultsPool": 50,
-		"EditSimilarMaxResultsToDisplay": 3,
-		"EditSimilarCounterValue": 1
+		"EditSimilarMaxResultsPool": {
+			"description": "The maximum pool of results to choose randomly from",
+			"value": 50
+		},
+		"EditSimilarMaxResultsToDisplay": {
+			"description": "Maximum number of chosen results to display",
+			"value": 3
+		},
+		"EditSimilarCounterValue": {
+			"description": "Specifies per which number of edits show the results' message (defaults to 1, which means that every time results are found the message is shown)",
+			"value": 1
+		},
+		"EditSimilarAlwaysShowThanks": {
+			"description": "Whether to thank for an edit even on no results",
+			"value": false
+		}
 	},
 	"MessagesDirs": {
 		"EditSimilar": [
@@ -40,5 +53,5 @@
 			"styles": "EditSimilar.css"
 		}
 	},
-	"manifest_version": 1
+	"manifest_version": 2
 }
