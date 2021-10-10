@@ -258,9 +258,10 @@ class EditSimilar {
 		$resultArray = [];
 
 		// so for now, to speed things up, just discard results from other namespaces (and subpages)
+		$namespaceInfo = MediaWikiServices::getInstance()->getNamespaceInfo();
 		while (
 			( $x = $dbr->fetchObject( $res ) ) &&
-			( MWNamespace::isContent( $x->page_namespace ) ) &&
+			( $namespaceInfo->isContent( $x->page_namespace ) ) &&
 			strpos( $x->page_title, '/' ) === false
 		) {
 			$resultArray[] = Title::makeTitle(
