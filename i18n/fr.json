@@ -9,9 +9,9 @@
 		]
 	},
 	"editsimilar-desc": "Encourage les utilisateurs à modifier les pages similaires après avoir publié une page",
-	"editsimilar-thanks": "Merci pour votre contribution.\nPouvez-vous vérifier {{PLURAL:$2|cette page connexe|ces pages connexes}} ? $1",
-	"editsimilar-thanks-notsimilar": "Merci pour votre contribution.\n{{PLURAL:$2|Cette page pourrait|Ces pages pourraient}} également avoir besoin de votre aide : $1.",
-	"editsimilar-thankyou": "Merci pour votre contribution, $1 !",
+	"editsimilar-thanks": "Merci pour votre contribution.\nVous pouvez également vérifier {{PLURAL:$2|la page connexe suivante|les pages connexes suivantes}} : $1.",
+	"editsimilar-thanks-notsimilar": "Merci pour votre contribution.\n{{PLURAL:$2|La page suivante pourrait|Les pages suivantes pourraient}} également avoir besoin de votre aide : $1.",
+	"editsimilar-thankyou": "Merci pour votre contribution, $1 !",
 	"editsimilar-link-disable": "définir les préférences",
-	"tog-edit-similar": "Activer les suggestions des pages similaires"
+	"tog-edit-similar": "Activer les suggestions de pages similaires"
 }
