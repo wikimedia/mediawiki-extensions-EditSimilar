@@ -8,6 +8,6 @@
 	"editsimilar-thanks": "Hvala za vaš prispevek.\nOglejte si {{PLURAL:$2|to sorodno stran|ti sorodni strani|te sorodne strani}}: $1.",
 	"editsimilar-thanks-notsimilar": "Hvala za vaš prispevek.\nVašo pomoč {{PLURAL:$2|potrebuje tudi ta stran|potrebujeta tudi ti strani|potrebujejo tudi te strani}}: $1.",
 	"editsimilar-thankyou": "Hvala za vaš prispevek, $1!",
-	"editsimilar-link-disable": "nastavi preference",
+	"editsimilar-link-disable": "nastavi prilagoditve",
 	"tog-edit-similar": "Omogoči predloge podobnih strani"
 }
