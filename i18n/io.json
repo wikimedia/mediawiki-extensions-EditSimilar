@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joao Xavier"
+		]
+	},
+	"editsimilar-thanks": "Danko pro vua kontributado.\nYen ca relata {{PLURAL:$2|pagino|pagini}}: $1.",
+	"editsimilar-thanks-notsimilar": "Danko pro vua kontributado.\nVu anke povas helpar ca {{PLURAL:$2|pagino|pagini}}: $1.",
+	"editsimilar-thankyou": "Danko pro vua kontributo, $1!"
+}
