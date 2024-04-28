@@ -59,7 +59,7 @@ class EditSimilarHooks {
 				$similarities = $instance->getSimilarArticles();
 				$messageText = '';
 
-				if ( !empty( $similarities ) ) {
+				if ( $similarities ) {
 					if ( $instance->mSimilarArticles ) {
 						$messageText = $out->msg(
 							'editsimilar-thanks',
@@ -75,7 +75,7 @@ class EditSimilarHooks {
 						)->parse();
 					}
 				} else {
-					if ( $user->isRegistered() && !empty( $wgEditSimilarAlwaysShowThanks ) ) {
+					if ( $user->isRegistered() && $wgEditSimilarAlwaysShowThanks ) {
 						$messageText = $out->msg(
 							'editsimilar-thankyou',
 							$user->getName()

@@ -108,7 +108,7 @@ class EditSimilar {
 	function getSimilarArticles() {
 		global $wgEditSimilarMaxResultsToDisplay;
 
-		if ( empty( $this->mAttentionMarkers ) || !$this->mAttentionMarkers ) {
+		if ( !$this->mAttentionMarkers ) {
 			return false;
 		}
 
@@ -124,16 +124,16 @@ class EditSimilar {
 				$articles,
 				$this->getResults( $this->mAttentionMarkers[$x] )
 			);
-			if ( !empty( $articles ) ) {
+			if ( $articles ) {
 				$articles = array_unique( $articles );
 			}
 			$x++;
 		}
 
-		if ( empty( $articles ) ) {
+		if ( !$articles ) {
 			$articles = $this->getAdditionalCheck();
 			// second check to make sure we have anything to display
-			if ( empty( $articles ) ) {
+			if ( !$articles ) {
 				return false;
 			}
 			$articles = array_unique( $articles );
@@ -152,7 +152,7 @@ class EditSimilar {
 
 		$realRandValues = [];
 
-		if ( empty( $rand_articles ) ) {
+		if ( !$rand_articles ) {
 			return false;
 		}
 
@@ -178,7 +178,7 @@ class EditSimilar {
 	 *                        failure
 	 */
 	function getBaseCategories() {
-		if ( empty( $this->mAttentionMarkers ) || !$this->mAttentionMarkers ) {
+		if ( !$this->mAttentionMarkers ) {
 			return false;
 		}
 
@@ -201,7 +201,7 @@ class EditSimilar {
 			}
 		}
 
-		if ( !empty( $resultArray ) ) {
+		if ( $resultArray ) {
 			return $resultArray;
 		} else {
 			return false;
@@ -284,7 +284,7 @@ class EditSimilar {
 		$title = Title::makeTitle( NS_CATEGORY, $markerCategory );
 		$resultArray = [];
 
-		if ( empty( $this->mBaseCategories ) ) {
+		if ( !$this->mBaseCategories ) {
 			return $resultArray;
 		}
 
