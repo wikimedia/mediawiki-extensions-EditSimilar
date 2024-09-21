@@ -182,7 +182,7 @@ class EditSimilar {
 			return false;
 		}
 
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$resultArray = [];
 		$res = $dbr->select(
 			[ 'categorylinks' ],
@@ -219,7 +219,7 @@ class EditSimilar {
 	 * @return array Array of page IDs
 	 */
 	function getAdditionalCheck() {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$res = $dbr->select(
 			'categorylinks',
@@ -246,7 +246,7 @@ class EditSimilar {
 	 * @return array Array of Title objects
 	 */
 	function idsToTitles( $idArray ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$res = $dbr->select(
 			'page',
@@ -280,7 +280,7 @@ class EditSimilar {
 	 * @return array Array of category names
 	 */
 	function getResults( $markerCategory ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$title = Title::makeTitle( NS_CATEGORY, $markerCategory );
 		$resultArray = [];
 
