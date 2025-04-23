@@ -190,8 +190,7 @@ class EditSimilar {
 			[ 'cl_from' => $this->mBaseArticle ],
 			__METHOD__,
 			[
-				'ORDER BY' => 'cl_from',
-				'USE INDEX' => 'cl_from'
+				'ORDER BY' => 'cl_from'
 			]
 		);
 
