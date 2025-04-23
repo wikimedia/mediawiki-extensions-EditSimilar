@@ -63,14 +63,18 @@ class EditSimilarHooks {
 					if ( $instance->mSimilarArticles ) {
 						$messageText = $out->msg(
 							'editsimilar-thanks',
+						)->rawParams(
 							$out->getLanguage()->listToText( $similarities ),
+						)->params(
 							count( $similarities )
 						)->parse();
 					} else {
 						// the articles we found were rather just articles needing attention
 						$messageText = $out->msg(
-							'editsimilar-thanks-notsimilar',
+							'editsimilar-thanks-notsimilar'
+						)->rawParams(
 							$out->getLanguage()->listToText( $similarities ),
+						)->params(
 							count( $similarities )
 						)->parse();
 					}
