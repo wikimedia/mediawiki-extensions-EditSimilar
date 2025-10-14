@@ -11,6 +11,7 @@
  * @link https://www.mediawiki.org/wiki/Extension:EditSimilar Documentation
  */
 
+use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 
 class EditSimilarHooks {
@@ -31,28 +32,29 @@ class EditSimilarHooks {
 			( $userOptionsLookup->getOption( $user, 'edit-similar', 1 ) == 1 ) &&
 			( in_array( $namespace, $wgContentNamespaces ) )
 		) {
-			$_SESSION['ES_saved'] = 'yes';
+			RequestContext::getMain()->getRequest()->getSession()->set( 'ES_saved', 'yes' );
 		}
 	}
 
 	/**
 	 * Show a message, depending on settings and the relevancy of the results.
 	 *
-	 * @param OutputPage &$out
+	 * @param MediaWiki\Output\OutputPage &$out
 	 * @param string &$text [unused]
 	 */
-	public static function onOutputPageBeforeHTML( OutputPage &$out, &$text ) {
+	public static function onOutputPageBeforeHTML( &$out, &$text ) {
 		global $wgEditSimilarAlwaysShowThanks;
 
 		$user = $out->getUser();
 		$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
+		$session = $out->getRequest()->getSession();
 
 		if (
-			!empty( $_SESSION['ES_saved'] ) &&
+			$session->get( 'ES_saved' ) &&
 			( $userOptionsLookup->getOption( $user, 'edit-similar', 1 ) == 1 ) &&
 			$out->isArticle()
 		) {
-			if ( EditSimilar::checkCounter() ) {
+			if ( EditSimilar::checkCounter( $out ) ) {
 				$title = $out->getTitle();
 				// here we'll populate the similar articles and links
 				$instance = new EditSimilar( $title->getArticleID() );
@@ -93,7 +95,7 @@ class EditSimilarHooks {
 			}
 
 			// display that only once
-			$_SESSION['ES_saved'] = '';
+			$session->set( 'ES_saved', '' );
 		}
 	}
 

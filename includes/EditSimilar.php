@@ -314,7 +314,7 @@ class EditSimilar {
 	/**
 	 * Message box wrapper
 	 *
-	 * @param OutputPage $out
+	 * @param MediaWiki\Output\OutputPage $out
 	 * @param string $text Message to show
 	 */
 	public static function showMessage( $out, $text ) {
@@ -342,20 +342,27 @@ class EditSimilar {
 	/**
 	 * For determining whether to display the message or not
 	 *
+	 * @param MediaWiki\Output\OutputPage $out
 	 * @return bool True to show the message, false to not show it
 	 */
-	public static function checkCounter() {
+	public static function checkCounter( $out ) {
 		global $wgEditSimilarCounterValue;
-		if ( isset( $_SESSION['ES_counter'] ) ) {
-			$_SESSION['ES_counter']--;
-			if ( $_SESSION['ES_counter'] > 0 ) {
+
+		$session = $out->getRequest()->getSession();
+		$existingCounterValue = $session->get( 'ES_counter' );
+
+		if ( $existingCounterValue && is_int( $existingCounterValue ) ) {
+			// Decrease by one
+			$session->set( 'ES_counter', ( $existingCounterValue - 1 ) );
+
+			if ( $session->get( 'ES_counter' ) > 0 ) {
 				return false;
 			} else {
-				$_SESSION['ES_counter'] = $wgEditSimilarCounterValue;
+				$session->set( 'ES_counter', $wgEditSimilarCounterValue );
 				return true;
 			}
 		} else {
-			$_SESSION['ES_counter'] = $wgEditSimilarCounterValue;
+			$session->set( 'ES_counter', $wgEditSimilarCounterValue );
 			return true;
 		}
 	}
