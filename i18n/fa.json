@@ -1,8 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Mohammad ebz",
 			"ZxxZxxZ"
 		]
 	},
-	"editsimilar-link-disable": "تنظیم ترجیحات"
+	"editsimilar-desc": "کاربران را تشویق می‌کند تا پس از ذخیره یک صفحه، صفحه مشابه را ویرایش کنند.",
+	"editsimilar-thanks": "از مشارکت شما متشکریم.\nبه {{PLURAL:$2|این صفحه مرتبط|این صفحات مرتبط}} نگاهی بیندازید: $1.",
+	"editsimilar-thanks-notsimilar": "از مشارکت شما متشکریم.\n{{PLURAL:$2|این صفحه همچنین می‌تواند از کمک شما استفاده کند|این صفحات همچنین می‌توانند از کمک شما استفاده کنند}}: $1.",
+	"editsimilar-thankyou": "$1، از مشارکت شما متشکریم!",
+	"editsimilar-link-disable": "تنظیم ترجیحات",
+	"tog-edit-similar": "فعال‌سازی پیشنهادات صفحات مشابه"
 }
