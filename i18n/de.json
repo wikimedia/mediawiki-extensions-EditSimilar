@@ -8,9 +8,9 @@
 		]
 	},
 	"editsimilar-desc": "Schlägt Benutzern nach dem Speichern einer Seite vor, eine ähnliche Seite zu bearbeiten",
-	"editsimilar-thanks": "Danke für deinen Beitrag.\nSchau dir auch diese {{PLURAL:$2|ähnliche Seite|ähnlichen Seiten}} an: $1.",
-	"editsimilar-thanks-notsimilar": "Danke für deinen Beitrag.\nDiese {{PLURAL:$2|Seite könnte|Seiten könnten}} auch hilfreich sein: $1.",
-	"editsimilar-thankyou": "Danke für deinen Beitrag, $1!",
+	"editsimilar-thanks": "Vielen Dank für {{#FORMAL:deinen|Ihren}} Beitrag.\n{{#FORMAL:Schau dir|Schauen Sie sich}} auch diese {{PLURAL:$2|ähnliche Seite|ähnlichen Seiten}} an: $1.",
+	"editsimilar-thanks-notsimilar": "Vielen Dank für {{#FORMAL:deinen|Ihren}} Beitrag.\nDiese {{PLURAL:$2|Seite könnte|Seiten könnten}} auch hilfreich sein: $1.",
+	"editsimilar-thankyou": "Danke für {{#FORMAL:deinen|Ihren}} Beitrag, $1!",
 	"editsimilar-link-disable": "Einstellungen setzen",
 	"tog-edit-similar": "Vorschläge für ähnliche Seiten anzeigen"
 }
