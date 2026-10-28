@@ -4,10 +4,14 @@
 			"Konsnos",
 			"NikosLikomitros",
 			"Nikosgranturismogt",
-			"ZaDiak"
+			"ZaDiak",
+			"Jimkats"
 		]
 	},
 	"editsimilar-desc": "Παροτρύνει τους χρήστες να επεξεργαστούν παρόμοιες σελίδες αφού αποθήκευσαν μία σελίδα",
+	"editsimilar-thanks": "Σας ευχαριστούμε για τη συνεισφορά σας.\nΔείτε {{PLURAL:$2|αυτήν τη σχετική σελίδα|αυτές τις σχετικές σελίδες}}: $1.",
+	"editsimilar-thanks-notsimilar": "Σας ευχαριστούμε για τη συνεισφορά σας.\n{{PLURAL:$2|Αυτή η σελίδα|Αυτές οι σελίδες}} θα χρειαζόντουσαν επίσης τη βοήθειά σας: $1.",
 	"editsimilar-thankyou": "Σας ευχαριστούμε για την συνεισφορά σας, $1!",
-	"editsimilar-link-disable": "ρύθμιση προτιμήσεων"
+	"editsimilar-link-disable": "ρύθμιση προτιμήσεων",
+	"tog-edit-similar": "Ενεργοποίηση προτάσεων παρόμοιων σελίδων"
 }
